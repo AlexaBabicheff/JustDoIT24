@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* max-width: 1100px; */
+    }
+  .pageBody{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    /* max-width: 1200px; */
+    padding: 0px 0px;
+  }
+
+  /* CategoriesGoods */
+
+  .categoriesButton button {
+    margin-top: 0px;
+  }
+
+  h1{
+    font-size: 300;
+  }
+  .component {
+    margin-bottom: 20px;
+    /* padding: 25%; */
+  }
+
+  .btn_main, .btn_categories{
+    /* width: 30px;
+    height: 20px;
+    left: 30px; */
+  }
+
+  .line hr {
+    border: 1px solid #dddddd;
+    width: 250px;
+    margin-top: 55px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+  }
+
+  .main_page > button,
+  .categories_page > button{
+    border: 1px solid #171716;
+    border-radius: 7px;
+    background-color: #fffff1;
+    font-size: 20px;
+    font-weight: 500;
+    width: 125px;
+    height: 25px;
+    margin-top: -170px;
+  }
+
+  .main_page > button{
+    color: rgb(147, 137, 137);
+    margin-left: 50px;
+    }
+
+  .categories_page > button{
+    color: rgb(69, 62, 62);
+    margin-left: 250px;
+    }
+
+  .categories_component{
+   margin-top: 50px;
+  }
+
+  /* .contact_component{
+    position: absolute;
+    top: 720px;
+  }
+
+  .map_component{
+    position: absolute;
+    top: 1120px;
+  } */
+/* All_sales */
+  /* .sale_component{
+    position: absolute;
+    top: -1680px;
+  } */
+
+  .map&contact{
+    position: absolute;
+    /* bottom: -50px; */
+  }
+
+  .products_page > button{
+    border: 2px solid #171716;
+    border-radius: 7px;
+    background-color: #fffff1;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(69, 62, 62);
+    width: 150px;
+      height: 25px;
+    margin-left: 250px;
+    margin-top: -200px;
+  }
+
+  .all_products_page > button{
+    border: 1px solid #171716;
+    border-radius: 7px;
+    background-color: #fffff1;
+    font-size: 20px;
+    font-weight: 500;
+    width: 125px;
+    height: 25px;
+    margin-top: -170px;
+    color: rgb(69, 62, 62);
+    margin-left: 250px;
+    }
+
+  

@@ -1,0 +1,12 @@
+.burgerMenu {
+    display: none;
+  }
+  
+  .navigation {
+    position: relative;
+  }
+  
+  .burger:hover + .pageBody,
+  .pageBody:hover {
+    display: block;
+  }

@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+}
+
+.ErrorPage{
+    max-width: 760px;
+    height: auto;
+    margin: 25px;
+    padding: 15px; 
+    margin-left: 300px;
+}
+.errorTitel{
+    width: 200px;
+    height: 100px;
+}
+.errorTitel p{
+    width:760px;
+    padding-top: 30px;
+    height: 200px;
+    color: black;
+    font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+}
+
+.errorText p{
+    text-align: center;
+}
+.btn_error{
+   margin-left: 150px;
+}
+
+.ErrorPage button{
+ left: 590px;
+ margin-top: 280px;
+ cursor: pointer;
+
+}

@@ -1,0 +1,170 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: normal;
+}
+.container{
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /*  > 768px */
+  @media only screen and (min-width: 1301px) and (max-width: 1440px) {
+    body {
+      font-size: 16px;
+      background-color: #fffff1;
+    }
+    
+  }
+
+    @media only screen and (min-width: 1001px) and (max-width: 1300px) {
+      body {
+        font-size: 16px;
+        background-color: rgb(255, 0, 0);
+      }
+      ul {
+        /* padding-left: 180px; */
+      }
+      nav > ul {
+        /* width: 750px; */
+      }
+      /* Banner */
+        banner {
+          left: 30px;
+        }
+        h1{
+          top: 10px;
+          font-size: 72px;
+        }
+        .btn_check_output {
+          top: 10px;
+        }
+        .button {
+          width: 120px;
+          top: 170px;
+          
+        }
+      }
+
+    @media only screen and (min-width: 769px) and (max-width: 1000px) {
+    body {
+      font-size: 16px;
+      background-color: green;
+    }}
+  
+  /* 480px - 767px */
+  @media only screen and (min-width: 481px) and (max-width: 768px) {
+    body {
+      font-size: 14px;
+      background-color: rosybrown;
+    }}
+  
+  /* > 360px */
+  @media only screen and (min-width: 320px) and (max-width: 480px) {
+    body {
+      font-size: 12px; 
+      background-color: blueviolet;
+    }}
+  
+
+ /*  1001px - 1440px */
+  /* @media (min-width: 1440px) {
+    body {
+      font-size: 16px;
+      background-color: pink; */
+      /* background-color: blue; */
+    /* }} */
+
+    /*  1001px - 1200px */
+  /* @media (max-width: 1200px) {
+    body {
+      font-size: 16px;
+      background-color: green; */
+      /* background-color: blue; */
+    /* }} */
+  
+  /* 769px - 1000px */
+  /* @media (max-width: 1000px) {
+    body {
+      font-size: 14px;
+      background-color: rosybrown; */
+    /* }} */
+  
+  /* 481px - 768px */
+  /* @media (max-width: 768px) {
+    body {
+      font-size: 12px; 
+      background-color: blueviolet; */
+    /* }} */
+  
+    /* 321px - 480px */
+  
+    /* @media (min-width: 480px) {
+    body {
+      font-size: 10px;
+      background-color: aquamarine; */
+      /* burger-menu */
+    /* }} */
+
+      /* <320px */
+
+    /* @media only screen and (min-width: 320px){
+      body {
+        font-size: 10px;
+        background-color: aquamarine; */
+        /* burger-menu */
+      /* }} */
+  
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* p{
+  left: 50px;
+} */
+
+/*  > 1001px */
+/* @media (min-width: 1001px) {
+  body {
+    font-size: 16px;
+    background-color: #fffff1; */
+  /* }} */
+
+/* 769px - 1000px */
+/* @media (max-width: 1000px) {
+  body {
+    font-size: 14px;
+    background-color: rosybrown; */
+  /* }} */
+
+/* 481 - 768px */
+/* @media (max-width: 768px) {
+  body {
+    font-size: 12px; 
+    background-color: blueviolet; */
+  /* }} */
+
+  /* 361px - 480px */
+
+/* @media (max-width: 480px) {
+  body {
+    font-size: 10px;
+    background-color: aquamarine; */
+  /* }} */
+
+  /* > 360px */
+
+/* @media (max-width: 360px) {
+  body {
+    font-size: 10px;
+    background-color: aquamarine; */
+  /* }} */
