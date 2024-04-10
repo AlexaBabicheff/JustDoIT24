@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+  }
+.line hr {
+    border: 1px solid #dddddd;
+    width: 570px;
+    margin-top: -30px;
+    margin-left: 430px;
+    margin-bottom: 30px;
+  }
+  
+  .categoriesButton button6 {
+    top: 40px;
+    left: 1000px;
+    background-color: white;
+    width: 170px;
+    height: 36px;
+    border: 1px solid #dddddd;
+    gap: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  button6 a {
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 500;
+    font-size: 16px;
+  }
+  
+  .categoriesButton button6 :hover {
+    background-color: #1f1f1f;
+  }

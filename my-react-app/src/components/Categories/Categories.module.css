@@ -1,0 +1,271 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.categoriesContainer {
+  
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+ width: 1200px;
+ height: 380px;
+  gap: 20px;
+}
+
+p {
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.line hr {
+  border: 1px solid #dddddd;
+  width: 630px;
+  margin-top: -30px;
+  margin-left: 430px;
+  margin-bottom: 30px;
+}
+
+.categoriesButton button {
+  top: 40px;
+  left: 1065px;
+  background-color: white;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #dddddd;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.categoriesButton button :hover {
+  background-color: #1f1f1f;
+}
+
+.categoriesContainerHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  
+  margin-left: 5%;
+}
+
+.categoriesCardsContainer {
+ display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 1200px;
+  gap: 20px;
+  position: relative;
+  margin-left: 8%;
+}
+
+.categoriesCard {
+  width: 290px;
+  height: 290px;
+ margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoriesCardText {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.categoriesCard img {
+  width: 270px;
+  height: 100%;
+  border: 0px, 0px, 1px, 0px;
+  border-radius: 15px;
+  
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .categoriesContainer {
+    width: 50%;
+    margin-left: -20px;
+  }
+  .line hr {
+    width: 430px;
+    margin-top: -30px;
+    margin-left: 380px;
+  }
+  p {
+    padding-left: 10px;
+  }
+  .categoriesButton button {
+    left: 800px;
+  }
+  .categoriesContainerHeader {
+    left: 30px;
+  }
+  .categoriesCard {
+    width: 270px;
+    height: 270px;
+    margin-bottom: 20px;
+  }
+  .categoriesCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    position: relative;
+    padding-top: 10px;
+    margin-left: 50px;
+  }
+} */
+
+/* для page Categories */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+}
+
+.categoriesContainerHeader p {
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+/* .line hr {
+  border: 1px solid #dddddd;
+  width: 570px;
+  margin-top: -30px;
+  margin-left: 430px;
+  margin-bottom: 30px;
+}
+
+.categoriesButton button {
+  top: 40px;
+  left: 1000px;
+  background-color: white;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #dddddd;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.categoriesButton button :hover {
+  background-color: #1f1f1f;
+} */
+
+.categoriesContainerHeader {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* margin-left: 5%; */
+  padding-bottom: 30px;
+  width: 1200px;
+}
+
+.categoriesCardsContainer {
+  position: absolute;
+  display: grid;
+  width: 1200px;
+  grid-template-columns: repeat(5, 1fr);
+  position: relative;
+  /* margin-left: 5%; */
+  gap: 5px;
+}
+
+.categoriesCard {
+  width: 220px;
+  height: 270px;
+  border-bottom: 1px solid #8b8b8b;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoriesCardText {
+  /* margin-top: 150px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 500px; */
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  padding-top: 30px;
+}
+
+.categoriesCard img {
+  width: 100%;
+  height: 100%;
+  border: 0px, 0px, 1px, 0px;
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .categoriesContainer {
+    width: 50%;
+    margin-left: -20px;
+  }
+  .line hr {
+    width: 430px;
+    margin-top: -30px;
+    margin-left: 350px;
+  }
+  p {
+    padding-left: 10px;
+  }
+  .categoriesButton button {
+    left: 800px;
+  }
+  .categoriesContainerHeader {
+    left: 30px;
+  }
+  .categoriesCard {
+    margin-bottom: 20px;
+  }
+  .categoriesCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    position: relative;
+    padding-top: 10px;
+    margin-left: 50px;
+  }
+}

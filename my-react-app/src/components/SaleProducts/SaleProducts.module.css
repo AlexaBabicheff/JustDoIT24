@@ -1,0 +1,159 @@
+/* .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    } */
+  
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: Montserrat;
+  }
+  
+  .saleProductContainer {
+    /* position: relative; */
+    display: flex;
+    margin-top: 30px; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1200px;
+    height: 1300px;
+    /* margin-left: 8%; */
+}
+  .saleProductCard {
+    position: relative;
+    width: 290px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .productImage{
+    max-width: 100%;
+    height: 280px;
+  }
+  .saleProductCard img {
+    max-width: 100%;
+    height: auto;
+    border: 0px, 0px, 1px, 0px;
+    border-radius: 10px;
+    z-index: 5;
+  }
+  .likedAndBasket{
+    /* position: absolute; */
+    top: 15px;
+  right: 5px;
+  z-index: 1;
+  }
+  .likedProduct1{
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    z-index: 1;
+  }
+  .basketProduct1{
+    position: absolute;
+    top: 70px;
+    right: 5px;
+    z-index: 1;
+  }
+  .discountPercent {
+    margin-top: -270px;
+    margin-right: 180px;
+    margin-bottom: 250px;
+    right: 5px;
+    max-width: 63px;
+    height: auto;
+    background-color: #f26d22;
+    color: white;
+    padding: 4px 8px 4px 8px;
+    border-radius: 5px;
+    z-index: 5;
+  }
+  .description {
+    margin: 5px;
+    /* padding-bottom: 80px; */
+  }
+  
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .priceInfo {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    gap: 15px;
+  }
+.price {
+    font-weight: 600;
+    font-size: 40px;
+    font-style: "bold";
+  }
+  .dicountPrice {
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 20px;
+    color: #8b8b8b;
+    position: relative;
+    top: 5px;
+    text-decoration: line-through;
+  }
+  
+  .dicountPrice::after {
+    content: "";
+    position: absolute;
+    /* bottom: 55%; */
+    left: 0;
+    right: 0;
+    transform: translateY(50%);
+  }
+  
+  @media only screen and (min-width: 1001px) and (max-width: 1300px) {
+    .saleContainer {
+      width: 50%;
+      margin-left: -20px;
+    }
+    .line hr {
+      width: 630px;
+    /* margin-top: 30px; */
+      margin-left: 10px;
+    }
+    p {
+      padding-left: 10px;
+    }
+    .saleButton button {
+      left: 800px;
+    }
+    .saleContainerHeader {
+      left: 30px;
+    }
+    .saleCard {
+      width: 270px;
+      margin-bottom: 90px;
+    }
+    .saleCardsContainer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      /* position: relative; */
+      margin-left: 50px;
+    }
+  }
+    

@@ -1,0 +1,182 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: none;
+  font-family: Montserrat;
+}
+
+.saleContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  gap: 20px;
+}
+
+h7 {
+  /* margin-left: 30px; */
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.line hr {
+  border: 1px solid #dddddd;
+  width: 1000px;
+  margin-top: 20px;
+}
+
+.saleButton button {
+  top: 40px;
+  left: 1070px;
+  background-color: white;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #dddddd;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.saleButton button:hover {
+  background-color: #1f1f1f;
+}
+
+.saleContainerHeader {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* margin-left: 5%; */
+}
+.saleCardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1200px;
+  height: 450px;
+  /* margin-left: 8%; */
+}
+.saleCard {
+  width: 290px;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.saleCard img {
+  max-width: 100%;
+  height: auto;
+  border: 0px, 0px, 1px, 0px;
+}
+.likedProduct{
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  z-index: 1;
+}
+.basketProduct{
+  position: absolute;
+  top: 70px;
+  right: 5px;
+  z-index: 1;
+}
+/* .likedProduct img {
+  position: absolute;
+  top: 35px;
+  right: 5px;
+  z-index: 1;
+} */
+.discountLabel {
+  position: absolute;
+  top: 15px;
+  left: 5px;
+  max-width: 63px;
+  height: auto;
+  background-color: #f26d22;
+  color: white;
+  padding: 4px 8px 4px 8px;
+  border-radius: 5px;
+  z-index: 1;
+}
+.description {
+  margin: 5px;
+  /* padding-bottom: 80px; */
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+  /* margin-top: 310px; */
+}
+.priceInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  gap: 15px;
+}
+.price {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 40px;
+  font-style: "bold";
+}
+.dicountPrice {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  color: #8b8b8b;
+  position: relative;
+  top: 5px;
+  text-decoration: line-through;
+}
+
+.dicountPrice::after {
+  content: "";
+  position: absolute;
+  /* bottom: 55%; */
+  left: 0;
+  right: 0;
+  transform: translateY(50%);
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .saleContainer {
+    width: 50%;
+    margin-left: -20px;
+  }
+  .line hr {
+    width: 630px;
+  /* margin-top: 30px; */
+    margin-left: 10px;
+  }
+  p {
+    padding-left: 10px;
+  }
+  .saleButton button {
+    left: 800px;
+  }
+  .saleContainerHeader {
+    left: 30px;
+  }
+  .saleCard {
+    width: 270px;
+    margin-bottom: 90px;
+  }
+  .saleCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    /* position: relative; */
+    margin-left: 50px;
+  }
+}

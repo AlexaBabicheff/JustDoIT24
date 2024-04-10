@@ -1,0 +1,251 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: none;
+    font-family: Montserrat;
+  }
+
+  .categoriesContainer {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 1200px;
+    height: 418px;
+    gap: 40px;
+    position: absolute;
+  }
+
+  p {
+    position: absolute;
+    font-weight: 700;
+    font-size: 64px;
+  }
+
+  .line hr {
+    border: 1px solid #dddddd;
+    width: 680px;
+    margin-top: 100px;
+    margin-left: 180px;
+    margin-bottom: 10px;
+  }
+
+  .categoriesButton button {
+    position: absolute;
+    top: 95px;
+    left: 1070px;
+    right: 500px;
+    background-color: white;
+    height: 36px;
+    border: 1px solid #dddddd;
+    gap: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  button a {
+    text-decoration: none;
+    color: #dddddd;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  .categoriesButton button :hover {
+    background-color: #1f1f1f;
+  }
+
+  .categoriesContainerHeader {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-left: 5%;
+  }
+
+  .categoriesCardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 532px;
+    margin-left: 5%;
+    position: relative;
+  }
+
+  .categoriesCardsContainerText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    height: 20px;
+    margin-left: 5%;
+    position: relative;
+    bottom: 30px;
+  }
+
+  .categoriesCard {
+    position: relative;
+    width: 290px;
+    height: 300px;
+    border: 1px solid #dddddd;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .categoriesCardText {
+    position: relative;
+    width: 290px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    margin: 5px;
+  }
+
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+  }   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+}
+
+.categoriesContainer {
+ display: flex;
+  flex-direction: column;
+  /* max-width: 100%; */
+  width: 1200px;
+  height: 1000px;
+}
+
+p {
+  margin-left: 30px;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+.line hr {
+  border: 1px solid #dddddd;
+  width: 630px;
+  margin-top: -30px;
+  margin-left: 430px;
+  margin-bottom: 30px;
+}
+
+.categoriesButton button {
+  top: 40px;
+  left: 1000px;
+  background-color: white;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #dddddd;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.categoriesButton button :hover {
+  background-color: #1f1f1f;
+}
+
+.categoriesContainerHeader {
+  /* display: flex; */
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  /* margin-top: 30px; */
+  margin-left: 5%;
+  padding-bottom: 30px;
+}
+
+.categoriesCardsContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+  position: relative;
+  margin-left: 8%;
+  height: 500px;
+}
+
+.categoriesCard {
+  width: 220px;
+  height: 270px;
+  /* gap: 1px; */
+  border-bottom: 1px solid #8b8b8b;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.categoriesCardText {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 500px; */
+}
+
+.title {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.categoriesCard img {
+  width: 100%;
+  height: 100%;
+  border: 0px, 0px, 1px, 0px;
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .categoriesContainer {
+    width: 50%;
+    margin-left: -20px;
+  }
+  .line hr {
+    width: 430px;
+    margin-top: -30px;
+    margin-left: 350px;
+  }
+  p {
+    padding-left: 10px;
+  }
+  .categoriesButton button {
+    left: 800px;
+  }
+  .categoriesContainerHeader {
+    left: 30px;
+  }
+  .categoriesCard {
+
+    margin-bottom: 20px;
+  }
+  .categoriesCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    position: relative;
+    padding-top: 10px;
+    margin-left: 50px;
+  }
+}

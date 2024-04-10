@@ -1,0 +1,22 @@
+.pageBody { 
+    /* margin: 100px; */
+    /* padding: 50px; */
+    width: '80%'; 
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+ }
+
+ .productsContainer {
+    display: flex;
+    width: 1200px;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 50px;
+   
+  }
+ 
+  .contact_map{
+    margin-top: 50px;
+  }

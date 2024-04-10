@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+
+.container {
+  margin-bottom: 30px;
+  width: calc(100%-60px);
+}
+
+.contacts {
+  gap: 25px;
+  padding-top: 20px;
+  /* width: 100%; */
+  width: 1100px;
+  height: 260px;
+  display: grid;
+  grid-template-columns: 700px 500px;
+  grid-template-rows: 120px 190px;
+}
+
+.phone,
+.socials,
+.address,
+.working_hours {
+  border-radius: 10px;
+  background-color: rgb(235, 245, 192);
+}
+
+h5 {
+  /* margin-left: 10px; */
+  font-weight: 700;
+  font-size: 64px;
+  width: 700px;
+}
+
+.contact_title {
+  font-weight: 500;
+  font-size: 20px;
+  margin: 20px;
+  color: rgb(119, 111, 111);
+}
+
+.contact_info {
+  font-weight: 600;
+  font-size: 40px;
+  /* margin: 20px; */
+  color: black;
+}
+h8 {
+  font-weight: 600;
+  font-size: 40px;
+  margin: 60px;
+  color: rgb(86, 78, 78);
+  text-decoration: none;
+  }
+.insta_whatsapp {
+  display: flex;
+  margin: 20px;
+}
+
+.contact_icons {
+  font-size: 40px;
+}
+
+@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+  .container {
+    margin-top: -70px;
+    margin-left: 3px;
+    margin-bottom: 30px;
+  }
+  .contacts {
+    grid-template-columns: 700px 430px;
+    grid-template-rows: 120px 190px;
+  }
+  h8 {
+    font-weight: 600;
+    font-size: 30px;
+  }
+}

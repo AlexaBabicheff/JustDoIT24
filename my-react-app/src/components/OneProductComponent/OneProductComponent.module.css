@@ -1,0 +1,157 @@
+.OneProductContainer {
+  top: 50px;
+  /* max-width: 1200px; */
+}
+
+.OneProductsContainerHeader {
+  position: absolute;
+  display: flex;
+  margin: 50px;
+}
+.OneProductImg img {
+  width: 600px;
+  height: 450px;
+}
+
+.OneProductDescription {
+  width: 600px;
+  /* height: 400px; */
+}
+/* title */
+.OneProductDescription h2 {
+  width: 600px;
+  padding-left: 20px;
+  top: -30px;
+  color: rgb(45, 42, 42);
+  font-size: 30px;
+  font-weight: 700;
+}
+/* слово Description */
+.OneProductDescription h6 {
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: 600;
+}
+/* описание товара */
+.OneProductDescription h3 {
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+/* price */
+.OneProductDescription h5 {
+  margin-top: 75px;
+  margin-left: 40px;
+  font-size: 50px;
+}
+
+/* READ MORE */
+.OneProductDescription h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 5px;
+  margin-left: 20px;
+}
+.check_out {
+  display: flex;
+}
+.OneProductDescription button {
+  width: 220px;
+  height: 50px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 21px;
+  border-radius: 7px;
+  border: none;
+  background: rgb(147, 165, 77);
+  top: 145px;
+  margin-left: 840px;
+}
+.iconAndTitle img {
+  width: 50px;
+  height: 50px;
+}
+
+/* кнопки для переключения между страницами*/
+.btns {
+  position: relative;
+}
+.btns button2 {
+  padding-top: 200px;
+  background-color: #fffff1;
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  position: absolute;
+  text-decoration: none;
+}
+.btns button2:hover {
+  font-weight: 600;
+  color: #0e0101;
+  border: 1px solid rgb(24, 3, 3);
+}
+.btn_mainPage button2,
+.btn_categories button2,
+.btn_products button2 {
+  border: 1px solid rgb(208, 203, 203);
+  font-weight: 500;
+  color: rgb(183, 177, 177);
+}
+.btn_mainPage button2 :hover,
+.btn_categories button2 :hover,
+.btn_products button2 :hover {
+  font-weight: 600;
+  color: rgb(19, 7, 7);
+}
+.btns a {
+  color: rgb(183, 177, 177);
+}
+.btn_mainPage button2 {
+  margin-left: 55px;
+}
+.btn_categories button2 {
+  margin-left: 255px;
+  /* top: 100px; */
+}
+.btn_products button2 {
+  margin-left: 455px;
+}
+.btn_oneProduct button2 {
+  margin-left: 655px;
+  border: 1px solid rgb(26, 17, 17);
+  font-weight: 500;
+  color: rgb(30, 26, 26);
+}
+.line {
+  position: absolute;
+  top: 15px;
+}
+.line__MinePageToCategories hr,
+.line__CategoriesToProducts hr,
+.line__ProductsToOneProduct hr {
+  position: absolute;
+  top: 15px;
+}
+/* линии соединения кнопок-переключателей */
+hr {
+  width: 100px;
+}
+.line__MinePageToCategories hr {
+  left: 181px;
+}
+.line__CategoriesToProducts hr {
+  left: 380px;
+}
+.line__ProductsToOneProduct hr {
+  left: 570px;
+}
+/* .oneProduct_contactComponent {
+  padding-top: 500px;
+} */
+
