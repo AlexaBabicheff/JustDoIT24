@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from "./ButtonsCategories.module.css";
 import {Link } from "react-router-dom";
-
+// buttons
 
 const ButtonsCategories = () => {
   return (
