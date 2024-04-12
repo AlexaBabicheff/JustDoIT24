@@ -8,6 +8,8 @@ import Map from "../../Map/Map";
 import iconBag from "../../Navigation/HeaderImg/icons.png";
 import iconHeart from "../../Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import PanelComponent from "../../SortingFilteringPanel/components/PanelComponent";
+
 
 const AllProducts = () => {
   // const { all } = useParams();
@@ -65,7 +67,7 @@ const AllProducts = () => {
             </div>
           </div>
           <h5>All products</h5>
-
+          <PanelComponent />
           <div className={classes.allFilters}>
             {/* Минимальная цена: */}
             <div className={classes.filter}>
