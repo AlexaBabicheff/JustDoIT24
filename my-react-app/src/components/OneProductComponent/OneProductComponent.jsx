@@ -1,23 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import classes from "./OneProductComponent.module.css";
 import { serverUrl } from "../../Config";
 import iconHeart from "../Navigation/HeaderImg/heart.svg";
-import iconBag from "../Navigation/HeaderImg/icons.png";
-import { Link } from "react-router-dom";
-import Contact from "../Contact/Contact";
-import Map from "../Map/Map";
 import ProductCounter from '../ProductCounter/ProductCounter';
-import { NavLink } from "react-router-dom";
 
 const OneProductComponent = () => {
   const [product, setProduct] = useState(null);
-  const [cart, setCart] = useState([]);
+  const [itemCount, setItemCount] = useState(0);
   const { id } = useParams();
+
+  const addToCart =(productData)=>{
+    console.log('Adding to cart:', productData);
+  }
 
   useEffect(() => {
     const oneProduct = `${serverUrl}products/${id}`;
-    console.log(oneProduct);
     fetch(oneProduct)
       .then((response) => response.json())
       .then((data) => {
@@ -30,7 +28,7 @@ const OneProductComponent = () => {
   if (!product) {
     return <div>Loading...</div>;
   }
-  console.log(product.data);
+
   return (
     <div className={classes.pageBody}>
       <div className={classes.btns}>
@@ -59,7 +57,7 @@ const OneProductComponent = () => {
           <hr />
         </div>
         
-        {/* Добавление товара в корзину */}
+      
         <div className={classes.btn_oneProduct}>
           <button2>One Product</button2>
         </div>
@@ -74,10 +72,8 @@ const OneProductComponent = () => {
             <h2>{product.title}</h2>
             <h5>$ {product.price}</h5>
             <div className="check_out">
-            <ProductCounter />
-            < NavLink to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></NavLink>
-
-              
+            <ProductCounter product={product} itemCount={itemCount} setItemCount={setItemCount} addToCart={addToCart} />
+              <Link to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></Link>
             </div>
             <h6>Description</h6>
             <h3>{product.description}</h3>
@@ -87,19 +83,11 @@ const OneProductComponent = () => {
             </a>
           </div>
           <div className={classes.like}>
-          < NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink>
+            <Link to="/favorites"><img src={iconHeart} alt="favorites" /></Link>
           </div>
         </div>
       </div>
-      {/* <div className={classes.oneProduct_contactComponent}>
-   <Contact />
-   </div>
-   <div className="map_component">
-    <Map />
-    </div> */}
     </div>
-
-    
   );
 };
 

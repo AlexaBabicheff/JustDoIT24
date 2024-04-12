@@ -29,7 +29,7 @@ const useSortingFilteringHook = () => {
 
     const filterDiscount = (item) => {
         if (hasDiscount.current.checked) {
-            return item.discount_price !== null;
+            return item.discont_price !== null;
         }
         return true;
     };

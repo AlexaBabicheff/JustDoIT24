@@ -1,26 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './ProductCounter.module.css';
 
-const ProductCounter = () => {
+const ProductCounter = ({ product, itemCount, setItemCount, addToCart }) => {
   const [count, setCount] = useState(0);
+  const { title, price, image } = product || {}; // Деструктуривация ппо умолчанию в случае отсутствия product
+  const serverUrl = 'http://127.0.0.1:3333/';
+
+  const handleAddToCart = () => {
+    const productData = {
+      image: image,
+      name: title,
+      count: itemCount,
+      price: price,
+    };
+    addToCart(productData);
+  };
 
   const increment = () => {
-    setCount(count + 1);
+    setItemCount(itemCount + 1);
   };
 
   const decrement = () => {
-    if (count > 0) {
-      setCount(count - 1);
+    if (itemCount > 0) {
+      setItemCount(itemCount - 1);
     }
   };
 
   return (
-    <div className={classes.pageBody}>
-    <div className={classes.ProductCounterContainer}>
-      <button4 onClick={decrement}>-</button4>
-      <input type="number" value={count} placeholder='1' min="1" readOnly />
-      <button4 onClick={increment}>+</button4>
-    </div>
+    <div>
+      <div className={classes.OneProductImg}>
+        <img src={serverUrl + '/' + image} alt={title} />
+      </div>
+      <div>Product Title: {title}</div>
+      <div>Product Price: ${price}</div>
+      <div>Quantity: {itemCount}</div>
+      <button onClick={decrement}>-</button>
+      <button onClick={increment}>+</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 };
