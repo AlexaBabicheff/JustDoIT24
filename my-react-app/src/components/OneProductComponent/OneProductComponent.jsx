@@ -26,7 +26,7 @@ const OneProductComponent = () => {
   }, [id]);
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <div>No products</div>;
   }
 
   return (
@@ -73,7 +73,7 @@ const OneProductComponent = () => {
             <h5>$ {product.price}</h5>
             <div className="check_out">
             <ProductCounter product={product} itemCount={itemCount} setItemCount={setItemCount} addToCart={addToCart} />
-              <Link to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></Link>
+              {/* <Link to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></Link> */}
             </div>
             <h6>Description</h6>
             <h3>{product.description}</h3>

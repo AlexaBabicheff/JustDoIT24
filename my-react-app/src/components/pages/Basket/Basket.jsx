@@ -8,7 +8,9 @@ import { useParams, Link } from "react-router-dom";
 import OneProduct from "../OneProduct/OneProduct";
 
 const Basket = () => {
-  
+  const add2basket = () => {
+    
+  };
 
 return (
     <div className="pageBody">

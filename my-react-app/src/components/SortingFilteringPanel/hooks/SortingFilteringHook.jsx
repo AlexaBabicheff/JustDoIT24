@@ -9,7 +9,7 @@ const useSortingFilteringHook = () => {
     const [priceTo, setPriceTo] = useState('');
     const [sortByPrice, setSortByPrice] = useState('default');
     const dispatch = useDispatch();
-    const hasDiscount = useRef(false);
+    const [hasDiscount, setDiscount] = useState(false);
 
     const fetchData = async () => {
         const response = await fetch('http://127.0.0.1:3333/products/all');
@@ -23,13 +23,16 @@ const useSortingFilteringHook = () => {
 
     const handleToggleDiscount = () => {
         const isChecked = hasDiscount.current.checked;
+        console.log(hasDiscount);
+        console.log(isChecked);
         dispatch(setCheckboxValue(isChecked));
         setFilteredData([]);
     };
 
     const filterDiscount = (item) => {
-        if (hasDiscount.current.checked) {
-            return item.discont_price !== null;
+        //console.log(hasDiscount);
+        if (hasDiscount) {
+             return item.discont_price !== null;
         }
         return true;
     };
@@ -55,7 +58,9 @@ const useSortingFilteringHook = () => {
         setPriceTo,
         sortByPrice,
         setSortByPrice,
-        handleToggleDiscount
+        hasDiscount,
+        setDiscount
+        // handleToggleDiscount
     };
 };
 

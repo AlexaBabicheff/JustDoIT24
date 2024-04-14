@@ -18,15 +18,15 @@ const OneProduct = () => {
     <div className={classes.pageBody}>  
         <Navigation /> 
         <OneProductComponent />
-      <div className={classes.OneProductContainer}>
-        <ProductCounter addToCart={addToCart} />
+        <div className={classes.OneProductContainer}>
+        {/* <ProductCounter addToCart={addToCart} /> */}
       </div>
       <div className={classes.oneProduct_contactComponent}>
         <Contact />
       </div>
-      <div className={classes.map_component}>
+      {/* <div className={classes.map_component}>
         <Map />
-      </div>
+      </div> */}
     </div>
   );
 };
