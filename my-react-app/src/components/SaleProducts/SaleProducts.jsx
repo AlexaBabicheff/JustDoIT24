@@ -6,6 +6,9 @@ import { serverUrl } from "../../Config";
 import iconBag from "../../components/Navigation/HeaderImg/icons.png";
 import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
+import greenHeart from "../../components/Navigation/HeaderImg/heart_green.png";
+import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
 
 
 const formatPrice = (price) => `${price.toFixed(2)}$`;
@@ -38,7 +41,7 @@ const SaleProducts = () => {
       <div className={styles.pageBody}>
         <div className={styles.saleProductContainer}>
           {products.map((product) => (
-            <Link
+            <NavLink
               key={product.id}
               to={`/one-product/${product.id}`}
               className={styles.saleProductCard}
@@ -49,16 +52,16 @@ const SaleProducts = () => {
                 />
               {/* <div className={styles.likedAndBasket}> */}
                 <div>
-                < NavLink to="/favorites"><img className={styles.likedProduct1} src={iconHeart} alt="favorites" /></NavLink>
+                <img className={styles.likedProduct1} src={whiteHeart} alt="favorites" />
                 </div>
                 <div>
 
-                 <NavLink to="/basket"><img className={styles.basketProduct1} src={iconBag} alt="shopping_cart" /></NavLink>
+                 <NavLink to="/basket"><img className={styles.basketProduct1} src={whiteBag} alt="shopping_cart" /></NavLink>
                    </div>
               {/* </div> */}
               <h3>{product.title}</h3>
               <p>Price: ${product.price}</p>
-            </Link>
+            </NavLink>
           ))}
           {/* <div className={styles.discountPercent}>
                   -{calculateDiscountPercent(product.price, product.discont_price)}%

@@ -6,22 +6,24 @@ import Navigation from '../../Navigation/Navigation';
 // import Sale from '../../Sale/Sale';
 import Contact from '../../Contact/Contact';
 import Map from '../../Map/Map';
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+import classes from "./Favorites.module.css";
 
 const Favorites = () => (
   <div className="pageBody">
     {/* <div className={style}> */}
     <Navigation />
-    <div className="container">
-      <div className="line">
+    <div className={classes.container_favorites}>
+      <div className={classes.line_favorites}>
         <hr />
       </div>
       <div className="btns">
         <div className="main_page">
-          <button><Link to="/">Main Page</Link></button>
+          <button><NavLink to="/">Main Page</NavLink></button>
         </div>
         <div className="categories_page">
-          <button>Liked Products</button>
+          <button>Favorites</button>
         </div>
       </div>
       <h5>Liked Products</h5>

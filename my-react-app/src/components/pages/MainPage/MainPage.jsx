@@ -6,14 +6,12 @@ import DiscountCard from "../../DiscountCard/Discount";
 import Sale from "../../Sale/Sale";
 import Contact from "../../Contact/Contact";
 import Map from "../../Map/Map";
-import classes from "../MainPage/MainPage.module.css";
 
 const MainPage = () => (
   <div className="pageBody">
     <Navigation />
-    <HeaderBanner />
-    {/* <Categories /> */}
-    <div className={classes.categoriesMainPage}>
+    <HeaderBanner /> 
+    <div>
       <Categories showAllCategories={false} />
     </div>
     <DiscountCard />

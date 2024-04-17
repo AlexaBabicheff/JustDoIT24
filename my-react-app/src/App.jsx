@@ -24,7 +24,8 @@ import CategoryProducts from './components/CategoryProducts/CategoryProducts';
 import OneProductComponent from './components/OneProductComponent/OneProductComponent';
 import FiltersPanel from './components/Filter/FiltersPanel';
 import ProductCounter from './components/ProductCounter/ProductCounter';
-
+import PanelComponent from './components/SortingFilteringPanel/components/PanelComponent';
+import IconLike from './components/IconLike/IconLike';
 
 function App() {
   return (
@@ -46,6 +47,8 @@ function App() {
           <Route path="/categories/:categoryId" element={<CategoryProducts />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="/panel-component" element={<PanelComponent />} />
+          <Route path="/icon-like" element={<IconLike />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

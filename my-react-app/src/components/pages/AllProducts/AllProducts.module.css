@@ -71,7 +71,6 @@ select {
   width: 250px;
   height: 270px;
   border-radius: 10px;
-  z-index: 1;
 /*   
   height: auto; */
 }

@@ -72,7 +72,7 @@ h8 {
     margin-bottom: 30px;
   }
   .contacts {
-    grid-template-columns: 700px 430px;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 120px 190px;
   }
   h8 {

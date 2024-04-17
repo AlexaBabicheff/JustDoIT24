@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import Navigation from "../../Navigation/Navigation";
 import classes from "./AllProducts.module.css";
-import { useParams, Link } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import { serverUrl } from "../../../Config";
 import Contact from "../../Contact/Contact";
 import Map from "../../Map/Map";
-import iconBag from "../../Navigation/HeaderImg/icons.png";
-import iconHeart from "../../Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import PanelComponent from "../../SortingFilteringPanel/components/PanelComponent";
+
 
 const AllProducts = () => {
   // const { all } = useParams();
@@ -16,7 +16,7 @@ const AllProducts = () => {
   const [sort, setSort] = useState("");
   const [minPrice, setMinPrice] = useState("");
   const [maxPrice, setMaxPrice] = useState("");
-  const [showDiscounted, setShowDiscounted] = useState(false);
+  // const [showDiscounted, setShowDiscounted] = useState(false);
 
   const allProductsURL = `${serverUrl}products/all`;
   useEffect(() => {
@@ -28,7 +28,8 @@ const AllProducts = () => {
       );
   }, []);
 
-  const openProductDetails = (product) => {};
+  
+  // const openProductDetails = (product) => {};
 
   const getFilteredAndSortedProducts = () => {
     let sortedProducts = [...products];
@@ -65,27 +66,27 @@ const AllProducts = () => {
             </div>
           </div>
           <h5>All products</h5>
-
-          <div className={classes.allFilters}>
+          <PanelComponent />
+          {/* <div className={classes.allFilters}>
             {/* Минимальная цена: */}
-            <div className={classes.filter}>
+            {/* <div className={classes.filter}>
               <label>Price </label>
               <input
                 type="number"
                 value={minPrice}
                 onChange={(e) => setMinPrice(e.target.value)}
                 placeholder="from"
-              />
+              /> */}
               {/* Максимальная цена: */}
-              <label> </label>
+              {/* <label> </label>
               <input
                 type="number"
                 value={maxPrice}
                 onChange={(e) => setMaxPrice(e.target.value)}
                 placeholder="to"
-              />
+              /> */}
               {/* Чек-бокс Discount */}
-              <label className={classes.discountCheckbox}>
+              {/* <label className={classes.discountCheckbox}>
                 <a
                   href={"/all_sales"}
                   onClick={() => setShowDiscounted(!showDiscounted)}
@@ -97,52 +98,39 @@ const AllProducts = () => {
                   checked={showDiscounted}
                   onChange={() => setShowDiscounted(!showDiscounted)}
                 />
-              </label>
+              </label> */}
 
               {/* <div className={classes.productSort}> */}
-              <div className={classes.productSort}>
+              {/* <div className={classes.productSort}>
                 Sorted
                 <select value={sort} onChange={(e) => setSort(e.target.value)}>
-                  <option value="">by default</option>
+                  <option value="">by default</option> */}
                   {/* цена по возрастанию */}
-                  <option value="price_asc">price ascending</option>
+                  {/* <option value="price_asc">price ascending</option> */}
                   {/* цена по убыванию */}
-                  <option value="price_desc">price descending</option>
+                  {/* <option value="price_desc">price descending</option>
                 </select>
               </div>
             </div>
-          </div>
-          <div className={classes.allProductsCardsContainer}>
-            {/* <div className={classes.allProductsCard}> */}
+          </div>  */}
+          {/* <div className={classes.allProductsCardsContainer}>
             {getFilteredAndSortedProducts().map((product) => (
-              <Link
+              <NavLink
                 key={product.id}
-                to={`/one-product/${product.id}`}
-                // 
-              >
+                to={`/one-product/${product.id}`}>
                 <img className={classes.productImage}
                   src={`${serverUrl}/${product.image}`}
                   alt={product.title}
                 />
-                 {/* <div> */}
-                < NavLink to="/favorites"><img className={classes.likedProduct} src={iconHeart} alt="favorites" /></NavLink>
-                 
-                {/* </div>
-                <div> */}
+                 {/* < NavLink to="/favorites"><img className={classes.likedProduct} src={iconHeart} alt="favorites" /></NavLink> */}
+                {/* <img id="white_heart" className={classes.likedProduct} src={whiteHeart} alt="favorites" />
                 <NavLink to="/basket"><img className={classes.basketProduct} src={iconBag} alt="shopping_cart" /></NavLink>
-{/* 
-                  <img
-                    className={classes.basketProduct1}
-                    src={iconBag}
-                    alt="shopping_cart"
-                  /> */}
-                {/* </div> */}
+
                 <h3>{product.title}</h3>
                 <p>Price: ${product.price}</p>
-              </Link>
+              </NavLink>
             ))}
-            {/* </div> */}
-          </div>
+             </div> */} 
           <div className={classes.contact_map}>
             <Contact />
             <Map />
@@ -154,4 +142,3 @@ const AllProducts = () => {
 };
 
 export default AllProducts;
-

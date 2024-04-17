@@ -10,11 +10,6 @@ const Form = ({ handleAddUser }) => {
     reset,
     getValues,
   } = useForm({
-    // defaultValues: {
-    //   firstName: '',
-    //   phoneNumber: 'Phone number',
-    //   email: 'Email'
-    // },
   })
 
   const handleUserSubmit = (data) => {
@@ -24,11 +19,12 @@ const Form = ({ handleAddUser }) => {
   console.log(getValues()) 
   return (
     <main>
-      
-     <h2>5% off on the first order</h2>
-      <div className={classes.content}>
-      < img src={discount} alt="" />
+      <div>
+      <h2>5% off on the first order</h2>   
       </div>
+     <div className={classes.content_discount}>
+      < img src={discount} alt="" />
+     
     
     <form onSubmit={handleSubmit(handleUserSubmit)} className={classes.form}>
       <label htmlFor="firstName">
@@ -79,7 +75,7 @@ const Form = ({ handleAddUser }) => {
       </button>
       <p>{isSubmitSuccessful && 'СПАСИБО!'}</p>
     </form>
-    {/* </div> */}
+    </div>
     </main>
   )
 }

@@ -1,13 +1,14 @@
 // для перехода из страницы категорий на единичную страницу
 
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link} from "react-router-dom";
 import classes from "./CategoryProducts.module.css";
 import { serverUrl } from "../../Config";
 import Navigation from "../Navigation/Navigation";
-import iconBag from "../../components/Navigation/HeaderImg//icons.png";
-import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
+import greenHeart from "../../components/Navigation/HeaderImg/heart_green.png";
+import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
 
 const CategoryProducts = () => {
   const { categoryId } = useParams();
@@ -40,27 +41,29 @@ const CategoryProducts = () => {
 
   return (
     <div className={classes.pageBody}>
+      <div className={classes.StructureContainer}>
       <Navigation />
       <div className={classes.btn_products}>
-        <div className="line">
+        {/* <div className="line">
           <hr />
-        </div>
+        </div> */}
         <div className="btns">
           {" "}
           <div className="main_page">
             <button>
-              <Link to="/">Main Page</Link>
+              <NavLink to="/">Main Page</NavLink>
             </button>
           </div>
           <div className="categories_page">
             <button>Categories</button>
           </div>
         </div>
-        {/* <div className={classes.btn_products}> */}
+        <div className={classes.btn_products}>
         <div className={classes.line__CategoriesToProducts}>
           <hr />
         </div>
         <button3>Products</button3>
+      </div>
       </div>
       <div className={classes.CategoryProductsContainer}>
         <div className={classes.CategoryProductsContainerHeader}>
@@ -69,27 +72,28 @@ const CategoryProducts = () => {
         <div className={classes.ProductsContainer}>
           <div className={classes.ProductsContainerCard}>
             {products.map((product) => (
-              <Link
+              <NavLink
                 key={product.id}
                 to={`/one-product/${product.id}`}
-                // className={classes.ProductCard}
+                className={classes.ProductCard}
               >
                 <img className={classes.ProductCard}
                   src={`${serverUrl}/${product.image}`}
                   alt={product.title}
                 />
                 <div>
-                < NavLink to="/favorites"><img className={classes.likedProduct1} src={iconHeart} alt="favorites" /></NavLink>
+                <img className={classes.likedProduct1} src={whiteHeart} alt="favorites" />
                 </div>
                 <div>
-                 <NavLink to="/basket"><img className={classes.basketProduct1} src={iconBag} alt="shopping_cart" /></NavLink>
+                 <NavLink to="/basket"><img className={classes.basketProduct1} src={whiteBag} alt="shopping_cart" /></NavLink>
                  </div>
                 <h3>{product.title}</h3>
                 <p>Price: ${product.price}</p>
-              </Link>
+              </NavLink>
             ))}
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
