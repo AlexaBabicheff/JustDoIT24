@@ -7,6 +7,8 @@ import Navigation from '../../Navigation/Navigation';
 import Contact from '../../Contact/Contact';
 import Map from '../../Map/Map';
 import { Link } from "react-router-dom";
+import FavoriteComponent from '../../Favorites/FavoriteComponent';
+import FavoritesDetail from '../../Favorites/FavoriteDetail';
 
 const Favorites = () => (
   <div className="pageBody">
@@ -21,11 +23,11 @@ const Favorites = () => (
           <button><Link to="/">Main Page</Link></button>
         </div>
         <div className="categories_page">
-          <button>Liked Products</button>
+          <button>Back to store</button>
         </div>
       </div>
       <h5>Liked Products</h5>
-    
+    <FavoritesDetail />
     {/* <HeaderBanner />
     <Categories />
     <DiscountCard /> */}
