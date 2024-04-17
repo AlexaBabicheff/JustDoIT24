@@ -9,7 +9,7 @@ const OneProductComponent = () => {
   const [product, setProduct] = useState(null);
   const [itemCount, setItemCount] = useState(0);
   const { id } = useParams();
-
+ 
   const addToCart =(productData)=>{
     console.log('Adding to cart:', productData);
   }

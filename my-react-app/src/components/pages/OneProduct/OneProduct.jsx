@@ -24,9 +24,9 @@ const OneProduct = () => {
       <div className={classes.oneProduct_contactComponent}>
         <Contact />
       </div>
-      {/* <div className={classes.map_component}>
-        <Map />
-      </div> */}
+      {/* <div className={classes.map_component}>*/}
+        {/*<Map />*/}
+      {/*</div> */}
     </div>
   );
 };
