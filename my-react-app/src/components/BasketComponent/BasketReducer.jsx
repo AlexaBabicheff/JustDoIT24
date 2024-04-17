@@ -23,16 +23,20 @@ const basketSlice = createSlice({
       state.items = newItems;
     },
     removeItemFromCart: (state, action) => {
+      console.log('remove');
       state.items = state.items.filter(({ id }) => id !== action.payload);
     },
     increaseItemCount: (state, action) => {
+      console.log('inc');
+      console.log(action.payload);
       state.items = state.items.map((item) =>
-        item.id === action.payload ? { ...item, count: item.count + 1 } : item
+        parseInt(item.id) === action.payload ? { ...item, count: item.count + 1 } : item
       );
     },
     decreaseItemCount: (state, action) => {
+      console.log('dec');
       state.items = state.items.map((item) =>
-        item.id === action.payload && item.count > 0
+        parseInt(item.id) === action.payload && item.count > 1
           ? { ...item, count: item.count - 1 }
           : item
       );

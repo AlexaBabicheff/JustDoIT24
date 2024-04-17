@@ -48,11 +48,11 @@ const ProductDetail = () => {
   };
 
   const increaseCount = (id) => {
-    dispatch(increaseCount(id));
+    dispatch(increaseItemCount(id));
   };
 
   const decreaseCount = (id) => {
-    dispatch(decreaseCount(id));
+    dispatch(decreaseItemCount(id));
   };
 
   const removeItem = (id) => {
@@ -85,7 +85,7 @@ const ProductDetail = () => {
             console.log(items.length);
             console.log(item);
 
-            // if (!item) return null;
+            if (!item) return null;
 
             return (
               <div key={id} className="productDetails">
@@ -96,11 +96,11 @@ const ProductDetail = () => {
                 {discont_price && <p>Discount Price: ${discont_price}</p>}
                 <p>Description: {description}</p>
                 <div>
-                    <button2 onClick={() => increaseCount(id)}>+</button2>
+                    <button4 onClick={() => increaseCount(id)}>+</button4>
                     <p>Count: {item.count}</p>
-                    <button2 onClick={() => decreaseCount(id)}>-</button2>
+                    <button4 onClick={() => decreaseCount(id)}>-</button4>
                 </div>  
-                <div><button2 onClick={() => removeItem(item.id)}>X</button2></div>
+                <div><button4 onClick={() => removeItem(item.id)}>X</button4></div>
               </div>
             );
         // });
