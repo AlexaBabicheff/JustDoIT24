@@ -7,7 +7,7 @@ import Basket from './../pages/Basket/Basket';
 import {
   addItemToCart,
   removeItemFromCart,
-} from "../BasketComponent/BasketReducer";
+} from "./BasketReducer";
 import { serverUrl } from '../../Config';
 
 const ProductDetail = () => {
@@ -15,6 +15,7 @@ const ProductDetail = () => {
   const { id } = useParams();
   const { items } = useSelector(({ basket }) => basket);
   const [productDetails, setProductDetails] = useState([]);
+
 
   useEffect(() => {
     const fetchProductDetails = async () => {
@@ -35,7 +36,7 @@ const ProductDetail = () => {
       console.log("Fetched product details:", details);
       setProductDetails(details.filter(detail => detail !== null));
     };
-
+  
     if (items.length > 0) {
       fetchProductDetails();
     }
@@ -63,20 +64,16 @@ const ProductDetail = () => {
       ) : (
         <div className="productDetailsContainer">
           {productDetails.map((productDetail) => {
-            const { id } = productDetail;
-            console.log("Product ID:", id);
+            const { id, image, title, count } = productDetail;
             const item = items.find(item => item.id === id);
-            console.log("Item for ID", id, ":", item);
-            if (!item) return null; // Skip rendering if item is not available
-            const { image, title, count } = productDetail;
-            console.log("Product details for ID", id, ":", productDetail);
+            if (!item) return null;
             return (
               <div key={id} className="productDetails">
                 <img src={`${serverUrl}/${image}`} alt={title} />
                 <p>ID: {id}</p>
                 <p>Count: {count}</p>
                 <p>Title: {title}</p>
-                <div><button4 onClick={() => removeItem(item.id)}>X</button4></div>
+                <div><button onClick={() => removeItemFromCart(item.id)}>X</button></div>
               </div>
             );
           })}
