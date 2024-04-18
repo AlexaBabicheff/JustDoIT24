@@ -6,6 +6,7 @@ import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
 import iconHeart2 from "../Navigation/HeaderImg/heart2.svg";
 import { serverUrl } from "../../Config";
 
+
 const FavoritesDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
@@ -46,6 +47,7 @@ const FavoritesDetail = () => {
 
   const removeItem = (id) => {
     console.log(id);
+    
     dispatch(removeItemFromFavorites(id));
   };
 
@@ -69,37 +71,37 @@ const FavoritesDetail = () => {
           <h2>Here is empty</h2></div>
       ) : (
         <div className="productDetailsContainer">
+
           {productDetails.map((productDetail) => {
             console.log(productDetail[0]);
             const { id, title, price, discount_price, description, image } =
               productDetail[0];
 
+
             const item = items.find((item) => parseInt(item.id) === id);
 
             if (!item) return null;
 
-            return (
-              <div key={id} className="productDetails">
-                <img src={`${serverUrl}${image}`} alt={title} />
-                <p>ID: {id}</p>
-                <p>Title: {title}</p>
-                <p>Price: ${price}</p>
-                {discount_price && <p>Discount Price: ${discount_price}</p>}
-                <p>Description: {description}</p>
-                <div>
-                  <button4 onClick={() => removeItem(id)}>
-                    <img src={iconHeart2} alt="favorites" />
-                  </button4>
+          return (
+            <div key={id} className="productDetails">
+              <img src={`${serverUrl}${image}`} alt={title} />
+              <p>ID: {id}</p>
+              <p>Title: {title}</p>
+              <p>Price: ${price}</p>
+              {discount_price && <p>Discount Price: ${discount_price}</p>}
+              <p>Description: {description}</p>
+              <div>
+                  <button4 onClick={() => removeItem(id)}><img src={iconHeart2} alt="favorites" /></button4>
                   {/* <button onClick={() => removeItem(id)}>Remove from Favorites</button>
                   <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button> */}
-                </div>
               </div>
-            );
-          })}
-        </div>
-      )}
-    </section>
-  );
+            </div>
+          );
+        })}
+      </div>
+    )}
+  </section>
+);
 };
 
 export default FavoritesDetail;
