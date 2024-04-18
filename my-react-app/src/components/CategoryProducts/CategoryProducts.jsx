@@ -6,8 +6,8 @@ import classes from "./CategoryProducts.module.css";
 import { serverUrl } from "../../Config";
 import Navigation from "../Navigation/Navigation";
 import iconBag from "../../components/Navigation/HeaderImg//icons.png";
-import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import FavoriteButton from "../Favorites/FavoriteButton";
 
 const CategoryProducts = () => {
   const { categoryId } = useParams();
@@ -79,7 +79,7 @@ const CategoryProducts = () => {
                   alt={product.title}
                 />
                 <div>
-                < NavLink to="/favorites"><img className={classes.likedProduct1} src={iconHeart} alt="favorites" /></NavLink>
+                < FavoriteButton />
                 </div>
                 <div>
                  <NavLink to="/basket"><img className={classes.basketProduct1} src={iconBag} alt="shopping_cart" /></NavLink>

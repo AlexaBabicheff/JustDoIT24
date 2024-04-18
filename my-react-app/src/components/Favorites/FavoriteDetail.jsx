@@ -2,22 +2,22 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import classes from './FavoriteDetail.module.css';
-
 import {
   addItemToFavorites,
   removeItemFromFavorites,
 } from "./FavoriteReducer";
 import { serverUrl } from '../../Config';
-import Favorites from './../pages/Favorites/Favorites';
+
 
 const FavoritesDetail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const { items } = useSelector(({ favorites }) => favorites); 
+  const { items } = useSelector(({ favorites }) => favorites);
   const [productDetails, setProductDetails] = useState([]);
 
   useEffect(() => {
     const fetchFavoritesDetails = async () => {
+      if (!items || items.length === 0) return;
       console.log("Fetching product details...");
       const uniqueIds = [...new Set(items.map(item => item.id))];
       console.log("Unique IDs:", uniqueIds);
@@ -42,7 +42,7 @@ const FavoritesDetail = () => {
   }, [items]);
 
   const addItem = (item, count) => {
-    dispatch(addItemToFavorites({ ...item, count })); 
+    dispatch(addItemToFavorites({ ...item })); 
   };
 
   const removeItem = (id) => {
@@ -51,14 +51,14 @@ const FavoritesDetail = () => {
 
   return (
     <section>
-      <div className='basketNavigation'>
-        <div><h7>Shopping cart</h7></div>
+      <div className='favoritesNavigation'>
+        <div><h7>Favorites</h7></div>
         <div className={classes.line}><hr /></div>
-        <div className={classes.basketButton}>
+        <div className={classes.favoritesButton}>
           <button><Link to="/all_products">Back to store</Link></button>
         </div>
       </div>
-      {!items.length ? (
+      {!items.length || items.length === 0 ? (
         <div>Here is empty</div>
       ) : (
         <div className="productDetailsContainer">
@@ -78,8 +78,9 @@ const FavoritesDetail = () => {
               {discount_price && <p>Discount Price: ${discount_price}</p>}
               <p>Description: {description}</p>
               <div>
-                  <button onClick={() => addItem(item, 1)}>картинка `сердечко`</button>
-                  <button onClick={() => removeItem(id)}>Remove from Favorites</button> 
+                  <button onClick={() => addItem(item)}><img src={iconHeart2} alt="favorites" /></button>
+                  <button onClick={() => removeItem(id)}>Remove from Favorites</button>
+                  <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button>
               </div>  
             </div>
           );

@@ -1,32 +1,18 @@
 import React from 'react';
-import HeaderBanner from '../../HeaderBanner/Banner';
-import Navigation from '../../Navigation/Navigation';
+// import HeaderBanner from '../../HeaderBanner/Banner';
+// import Navigation from '../../Navigation/Navigation';
 // import Categories from '../../Categories/Categories';
 // import DiscountCard from '../../DiscountCard/Discount';
 // import Sale from '../../Sale/Sale';
-import Contact from '../../Contact/Contact';
-import Map from '../../Map/Map';
+// import Contact from '../../Contact/Contact';
+// import Map from '../../Map/Map';
 import { Link } from "react-router-dom";
-import FavoriteComponent from '../../Favorites/FavoriteComponent';
 import FavoritesDetail from '../../Favorites/FavoriteDetail';
 
 const Favorites = () => (
   <div className="pageBody">
     {/* <div className={style}> */}
-    <Navigation />
-    <div className="container">
-      <div className="line">
-        <hr />
-      </div>
-      <div className="btns">
-        <div className="main_page">
-          <button><Link to="/">Main Page</Link></button>
-        </div>
-        <div className="categories_page">
-          <button>Back to store</button>
-        </div>
-      </div>
-      <h5>Liked Products</h5>
+    {/* <Navigation /> */}
     <FavoritesDetail />
     {/* <HeaderBanner />
     <Categories />
@@ -34,7 +20,6 @@ const Favorites = () => (
     {/* <Sale /> */}
     {/* <Contact />
     <Map /> */}
-  </div>
   </div>
 );
 

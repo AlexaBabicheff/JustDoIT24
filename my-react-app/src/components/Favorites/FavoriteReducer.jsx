@@ -20,7 +20,7 @@ const FavoritesSlice = createSlice({
       if (existingItem) {
         state.items = state.items.map((item) => {
           return item.id === action.payload.id
-            ? { ...item, count: action.payload.count + item.count }
+            ? { ...item}
             : item;
         });
       } else {

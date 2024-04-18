@@ -26,8 +26,8 @@ import FiltersPanel from './components/Filter/FiltersPanel';
 import ProductCounter from './components/ProductCounter/ProductCounter';
 import PanelComponent from './components/SortingFilteringPanel/components/PanelComponent';
 import ProductDetail from './components/BasketComponent/ProductDetail';
-import FavoriteReducer from './components/Favorites/FavoriteReducer';
 import FavoriteDetail from './components/Favorites/FavoriteDetail';
+import FavoriteButton from './components/Favorites/FavoriteButton';
 
 function App() {
   return (
@@ -37,8 +37,6 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/burger-menu" element={<BurgerMenu />} />
-          <Route path="/favorite-reducer" from element={<FavoriteReducer />} />
-          <Route path="/favorite-detail" from element={<FavoriteDetail />} />
           <Route path="/buttons-categories" element={<ButtonsCategories />} />
           <Route path="/filters-panel" element={<FiltersPanel />} />
           <Route path="/categories-goods" element={<CategoriesGoods />} />
@@ -53,6 +51,8 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/panel-component" element={<PanelComponent />} />
           <Route path="/product-detail" element={<ProductDetail />} />
+          <Route path="/favorite-detail" element={<FavoriteDetail />} />
+          <Route path="/favorite-button" element={<FavoriteButton />} /> 
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
