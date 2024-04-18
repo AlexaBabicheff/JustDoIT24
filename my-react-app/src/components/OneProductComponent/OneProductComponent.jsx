@@ -4,6 +4,7 @@ import classes from "./OneProductComponent.module.css";
 import { serverUrl } from "../../Config";
 import iconHeart from "../Navigation/HeaderImg/heart.svg";
 import ProductCounter from '../ProductCounter/ProductCounter';
+import FavoriteButton from '../Favorites/FavoriteButton';
 
 const OneProductComponent = () => {
   const [product, setProduct] = useState(null);
@@ -83,7 +84,7 @@ const OneProductComponent = () => {
             </a>
           </div>
           <div className={classes.like}>
-            <Link to="/favorites"><img src={iconHeart} alt="favorites" /></Link>
+            <FavoriteButton />
           </div>
         </div>
       </div>

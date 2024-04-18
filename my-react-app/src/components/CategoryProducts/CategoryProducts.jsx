@@ -5,7 +5,7 @@ import { useParams, Link } from "react-router-dom";
 import classes from "./CategoryProducts.module.css";
 import { serverUrl } from "../../Config";
 import Navigation from "../Navigation/Navigation";
-import iconBag from "../../components/Navigation/HeaderImg//icons.png";
+import iconBag from "../../components/Navigation/HeaderImg/icons.png";
 import { NavLink } from "react-router-dom";
 import FavoriteButton from "../Favorites/FavoriteButton";
 
