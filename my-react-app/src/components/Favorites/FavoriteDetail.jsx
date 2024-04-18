@@ -6,6 +6,7 @@ import {
   addItemToFavorites,
   removeItemFromFavorites,
 } from "./FavoriteReducer";
+import iconHeart2 from '../Navigation/HeaderImg/heart2.svg';
 import { serverUrl } from '../../Config';
 
 
@@ -46,8 +47,11 @@ const FavoritesDetail = () => {
   };
 
   const removeItem = (id) => {
+    console.log(id);
     dispatch(removeItemFromFavorites(id)); 
   };
+
+  console.log(items);
 
   return (
     <section>
@@ -63,7 +67,8 @@ const FavoritesDetail = () => {
       ) : (
         <div className="productDetailsContainer">
         {productDetails.map((productDetail) => { 
-          const { id, title, price, discount_price, description, image } = productDetail;
+          console.log(productDetail[0]);
+          const { id, title, price, discount_price, description, image } = productDetail[0];
 
           const item = items.find(item => parseInt(item.id) === id);
 
@@ -78,10 +83,10 @@ const FavoritesDetail = () => {
               {discount_price && <p>Discount Price: ${discount_price}</p>}
               <p>Description: {description}</p>
               <div>
-                  <button onClick={() => addItem(item)}><img src={iconHeart2} alt="favorites" /></button>
-                  <button onClick={() => removeItem(id)}>Remove from Favorites</button>
-                  <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button>
-              </div>  
+                  <button4 onClick={() => removeItem(id)}><img src={iconHeart2} alt="favorites" /></button4>
+                  {/* <button onClick={() => removeItem(id)}>Remove from Favorites</button>
+                  <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button> */}
+              </div>
             </div>
           );
         })}

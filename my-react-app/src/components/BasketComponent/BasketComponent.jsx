@@ -7,17 +7,17 @@ const BasketComponent = () => {
 
   return (
     <div>
-      <h2>Корзина</h2>
+      <h2>Cart</h2>
       <div className="product-list">
         {items.map((item) => (
           <div key={item.id} className="product-item">
             <img src={item.img} alt={item.title} />
             <div>
               <h3>{item.title}</h3>
-              <p>Цена: {item.price} руб.</p>
-              <p>Количество: {item.count}</p>
+              <p>Price: {item.price} </p>
+              <p>Quantity: {item.count}</p>
             </div>
-            <button onClick={() => removeItemFromCart(item.id)}>Удалить</button>
+            <button onClick={() => removeItemFromCart(item.id)}>Remove from favorites</button>
           </div>
         ))}
       </div>
