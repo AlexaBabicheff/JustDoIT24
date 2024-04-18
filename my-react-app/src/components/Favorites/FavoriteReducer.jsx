@@ -1,3 +1,4 @@
+import React from 'react';
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
@@ -10,7 +11,7 @@ const FavoritesSlice = createSlice({
   reducers: {
     addItemToFavorites: (state, action) => {
       if (!action.payload || !action.payload.id) {
-        // Добавьте обработку некорректных входных данных
+         //добавить дополнительную логику, если есть 
         return;
       }
 
@@ -19,7 +20,7 @@ const FavoritesSlice = createSlice({
       if (existingItem) {
         state.items = state.items.map((item) => {
           return item.id === action.payload.id
-            ? { ...item, count: action.payload.count + item.count }
+            ? { ...item}
             : item;
         });
       } else {
