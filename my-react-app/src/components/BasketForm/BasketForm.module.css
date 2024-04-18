@@ -1,0 +1,71 @@
+.basket_form{
+    width: 400px;
+    height: 410px;
+    border: 3px #d5d5ab solid;
+    background-color: #d5d5ab;
+    border-radius: 10px;
+}
+.basket_form h3{
+    font-size: 38px;
+    font-weight: 700;
+    color: rgb(69, 61, 61);
+}
+.basket_form p{
+        font-size: 28px;
+        font-weight: 500;
+        color: rgb(117, 103, 103); 
+}
+.totalSum{
+    display: flex;
+}
+.totalSum h2{
+    font-size: 38px;
+    font-weight: 700;
+    color: rgb(69, 61, 61);
+    margin-top: -30px;
+}
+.firstName,
+  .phoneNumber,
+  .email {
+    width: 100%;
+    margin-top: 7px;
+    height: 58px;
+    border: 1px solid rgb(125, 104, 104);
+    border-radius: 7px;
+    background-color: #fffff1;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fffff1;
+  } 
+  
+  .basketForm button {
+    margin-top: 180px;
+    width: 300px;
+    height: 58px;
+    border: none;
+    border-radius: 7px;
+    background-color: rgb(147, 165, 77);
+    font-size: 20px;
+    font-weight: 500;
+    color: #fffff1;
+  }
+  form > button {
+    margin-top: 20px;
+    width: 100%;
+    height: 58px;
+    border: 2px solid #fffff1;
+    border-radius: 7px;
+    background-color: #fffff1;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(69, 62, 62);
+  }
+  .btn {
+    top: 220px;
+
+    width: 100%;
+    /* left: -0.5px;  */
+  }
+  input {
+    display: flex;
+  }

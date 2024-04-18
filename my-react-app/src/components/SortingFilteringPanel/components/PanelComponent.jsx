@@ -1,5 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import useSortingFilteringHook from '../hooks/SortingFilteringHook';
+import classes from './PanelComponent.module.css';
+import { serverUrl } from "../../../Config";
+import { NavLink } from "react-router-dom";
+import whiteBag from "../../Navigation/HeaderImg/bag_white.png";
+import greenHeart from "../../Navigation/HeaderImg/heart_green.png";
+import whiteHeart from "../../Navigation/HeaderImg/heart_white.png";
+// import IconLike from "../../IconLike/IconLike";
 
 function PanelComponent() {
     const {
@@ -16,7 +23,7 @@ function PanelComponent() {
     } = useSortingFilteringHook();
 
     return (
-        <div>
+        <div className="pageBody">
             <div>
                 <label>Price from: </label>
                 <input type="number" value={priceFrom} onChange={(e) => setPriceFrom(e.target.value)} />
@@ -24,7 +31,7 @@ function PanelComponent() {
                 <input type="number" value={priceTo} onChange={(e) => setPriceTo(e.target.value)} />
             </div>
             <div className='checkbox'>
-                <label><input type="checkbox" value={hasDiscount} onChange={(e) => setDiscount(e.target.checked)} />Discounted items</label>
+            <label><input type="checkbox" value={hasDiscount} onChange={(e) => setDiscount(e.target.checked)} />Discounted items</label>
             </div>
             <div>
                 <div className='price_sorting'>
@@ -36,14 +43,21 @@ function PanelComponent() {
                     </select>
                 </div>
             </div>
-            <ul>
+            <div className={classes.allProductsCardsContainer}>
                 {filteredData.map(item => (
-                    <li key={item.id}>
+                    <NavLink key={item.id} to={`/one-product/${item.id}`} className={classes.productImage}>
+                        <img 
+                  src={`${serverUrl}/${item.image}`}
+                  alt={item.title}
+                />
+                <img id="white_heart" className={classes.likedProduct} src={whiteHeart} alt="favorites" />              
+                 {/* <IconLike /> */}
+                 <NavLink to="/basket"><img className={classes.basketProduct} src={whiteBag} alt="shopping_cart" /></NavLink>
                         <h3>{item.title}</h3>
                         <p>Price: ${item.price}</p>
-                    </li>
+                    </NavLink>
                 ))}
-            </ul>
+            </div>
         </div>
     );
 }

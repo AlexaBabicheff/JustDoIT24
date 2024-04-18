@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import classes from './BasketComponent';
-import './ProductDetail.module.css';
-import Basket from './../pages/Basket/Basket';
+import classes from './ProductDetail.module.css';
+import BasketForm from './../BasketForm/BasketForm';
 import {
   addItemToCart,
   removeItemFromCart,
@@ -105,6 +104,7 @@ const ProductDetail = () => {
             );
         // });
         })}
+        <BasketForm />
       </div>
     )}
   </section>

@@ -4,13 +4,16 @@ import classes from './Sale.module.css';
 import iconBag from "../../components/Navigation/HeaderImg//icons.png";
 import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
-
+import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
+import greenHeart from "../../components/Navigation/HeaderImg/heart_green.png";
+import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
+import { serverUrl } from "../../Config";
 
 const Sale = () => {
     const [products, setProducts] = useState([]);
-
+    const saleURL = `${serverUrl}products/all`;
     useEffect(() => {
-        fetch('http://127.0.0.1:3333/products/all')
+        fetch(saleURL)
             .then(response => response.json())
             .then(data => {
                 setProducts(data);
@@ -39,10 +42,10 @@ const Sale = () => {
                 <Link key={product.id} to={`/all_sales/`}>
                
                 <div className={classes.saleCard} style={{ position: 'relative', overflow: 'hidden' }}>
-            <img src={"http://127.0.0.1:3333" + product.image} alt={product.title} />
+            <img src={`${serverUrl}`+ product.image} alt={product.title} />
             <div className={classes.discountLabel}>- { calculateDiscountPercentage(product.price, product.discont_price) }%</div>
-            <NavLink to="/favorites"><img className={classes.likedProduct} src={iconHeart} alt="favorites" /></NavLink>
-            <NavLink to="/basket"><img className={classes.basketProduct} src={iconBag} alt="shopping_cart" /></NavLink>
+            <img className={classes.likedProduct} src={whiteHeart} alt="favorites" />
+            <NavLink to="/basket"><img className={classes.basketProduct} src={whiteBag} alt="shopping_cart" /></NavLink>
             
             <div className={classes.description}>
                 <div className={classes.title}>{product.title}</div>

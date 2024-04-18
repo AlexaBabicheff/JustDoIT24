@@ -1,10 +1,13 @@
 /* .container { */
   main {
     position: relative;
+    
   }
   
   .content {
     display: flex;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
     margin-bottom: 40px;
     width: 1200px;
