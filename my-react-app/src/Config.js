@@ -1,2 +1,2 @@
-const serverUrl = 'http://127.0.0.1:3333/';
+const serverUrl = 'https://justdoit-project-backend.onrender.com/';
 export { serverUrl }; 
