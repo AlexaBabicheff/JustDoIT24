@@ -12,12 +12,12 @@ const MainPage = () => (
   <div className="pageBody">
     <Navigation />
     <HeaderBanner />
-    {/* <Categories /> */}
+   
     <div className={classes.categoriesMainPage}>
       <Categories showAllCategories={false} />
     </div>
     <DiscountCard />
-    <Sale />
+    <Sale /> 
     <Contact />
     <Map />
   </div>

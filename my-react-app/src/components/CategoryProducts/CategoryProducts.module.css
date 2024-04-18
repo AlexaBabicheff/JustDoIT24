@@ -3,9 +3,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+.StructureContainer {
+  /* display: flex; */
+  width: 1200px;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 50px;
+  margin: 15px 50px;
+}
 .CategoryProductsContainerHeader {
   margin-top: 130px;
-}
+ }
 .CategoryProductsContainerHeader h1 {
   color: rgb(45, 42, 42);
   font-size: 36px;
@@ -17,30 +25,58 @@
   width: 1200px;
   flex-direction: row;
   align-items: center;
-  /* margin-left: 60px; */
 }
-
 .ProductsContainerCard {
   position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
+  display: flex;
+  margin-top: 30px; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1200px;
 }
-.ProductCard{
-  /* position: relative; */
-  width: 300px;
-  height: 300px;
+.ProductsContainerCard h3 {
+  width: 250px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ProductsContainerCard  h3:hover {
+  white-space: normal;
+  overflow: visible;
+  height: 70px;
+}
+.ProductCard img {
+  max-width: 100%;
+  height: auto;
+  border: 0px, 0px, 1px, 0px;
+  border-radius: 10px;
+  z-index: 5;
+  color: white;
+}
+.ProductCard {
+   position: relative;
+   width: 290px;
+   margin-bottom: 20px;
+   border: 1px solid #dddddd;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 .likedProduct1{
   position: absolute;
   top: 15px;
-  /* right: 5px; */
+  right: 5px;
   z-index: 1;
 }
 .basketProduct1{
   position: absolute;
   top: 70px;
-  /* right: 5px; */
+  right: 5px;
   z-index: 1;
 }
 
@@ -89,10 +125,6 @@
   top: 20px;
 }
 .btn_products button3 {
-  /* margin-left: 455px;
-  border: 1px solid rgb(26, 17, 17);
-  font-weight: 500;
-  color: rgb(30, 26, 26); */
   position: absolute;
   border: 1px solid #171716;
   border-radius: 7px;
@@ -103,14 +135,14 @@
   height: 25px;
   margin-top: -12px;
   color: rgb(69, 62, 62);
-  margin-left: 455px;
+  margin-left: 355px;
   padding-left: 15px;
 }
 /* линии соединения кнопок-переключателей */
 .line__CategoriesToProducts hr {
   /* position: absolute; */
-  margin-top: -15px;
-  margin-left: 400px;
-  width: 100px;
+  margin-top: 30px;
+  margin-left: 30px;
+  width: 350px;
 }
 

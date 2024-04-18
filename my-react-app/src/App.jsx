@@ -1,4 +1,3 @@
-// здесь делаю адаптив
 
 import React from 'react';
 import './App.css';
@@ -12,12 +11,15 @@ import AllSales from './components/pages/AllSales/AllSales';
 
 import Favorites from './components/pages/Favorites/Favorites';
 import Basket from './components/pages/Basket/Basket';
+
+
+
 import BurgerMenu from './components/pages/BurgerMenu/BurgerMenu';
 
 import OneProduct from './components/pages/OneProduct/OneProduct';
 import NotFound from './components/pages/NotFound/NotFound';
 
-
+import BasketForm from './components/BasketForm/BasketForm';
 import ButtonsCategories from './components/ButtonsCategories/ButtonsCategories'
 import Categories from './components/Categories/Categories';
 import CategoryProducts from './components/CategoryProducts/CategoryProducts';
@@ -36,6 +38,7 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/basket" element={<Basket />} />
+          <Route path="/basket-form" element={<BasketForm />} />
           <Route path="/burger-menu" element={<BurgerMenu />} />
           <Route path="/buttons-categories" element={<ButtonsCategories />} />
           <Route path="/filters-panel" element={<FiltersPanel />} />
