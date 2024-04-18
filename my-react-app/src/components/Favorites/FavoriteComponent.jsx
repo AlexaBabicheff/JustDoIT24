@@ -1,23 +1,23 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { removeItemFromCart } from './FavoriteReducer';
+import { removeItemFromFavorites } from './FavoriteReducer'; 
 
-const BasketComponent = () => {
-  const items = useSelector(state => state.cart.items); // Получаем товары из Redux хранилища
+const FavoriteComponent = () => {
+  const items = useSelector(state => state.favorites.items); 
 
   return (
     <div>
-      <h2>Корзина</h2>
+      <h2>Favorites</h2>
       <div className="product-list">
         {items.map((item) => (
           <div key={item.id} className="product-item">
             <img src={item.img} alt={item.title} />
             <div>
               <h3>{item.title}</h3>
-              <p>Цена: {item.price} руб.</p>
-              <p>Количество: {item.count}</p>
+              <p>Price: {item.price}</p>
+              <p>Quantity: {item.count}</p>
             </div>
-            <button onClick={() => removeItemFromCart(item.id)}>Удалить</button>
+            <button onClick={() => removeItemFromFavorites(item.id)}>Remove</button>
           </div>
         ))}
       </div>
@@ -25,4 +25,4 @@ const BasketComponent = () => {
   );
 };
 
-export default BasketComponent;
+export default FavoriteComponent;

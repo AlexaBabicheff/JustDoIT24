@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import classes from './FavoriteComponent';
-import './ProductDetail.module.css';
+import classes from './FavoriteDetail.module.css';
+
 import {
   addItemToFavorites,
   removeItemFromFavorites,
