@@ -1,12 +1,8 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
-import classes from './BasketComponent.module.css';
+import classes from './BasketForm.module.css';
 
-const BasketComponent = () => {
-  const items = useSelector(state => state.cart.items); // Получаем товары из Redux хранилища
-
-  const Form = ({ handleAddUser }) => {
+  const BasketForm = ({ handleAddUser }) => {
     const {
       register,
       handleSubmit,
@@ -22,15 +18,13 @@ const BasketComponent = () => {
     }
     console.log(getValues()) 
   return (
-    <div className={classes.basket}>
-      <h2>Shopping Basket</h2>
-      {/* Форма  */}
+   
       <div className={classes.basket_form}>
         <h3>Order details</h3>
         <p>... items</p>
         <div className={classes.totalSum}>
-        <h2>Total</h2>
-        <p>Price</p>
+        <p>Total</p>
+        <h2>Price</h2>
         </div>
         <form onSubmit={handleSubmit(handleUserSubmit)} className={classes.basketForm}>
       <label htmlFor="firstName">
@@ -76,22 +70,13 @@ const BasketComponent = () => {
         />
       </label>
       <p style={{ color: 'red' }}>{errors.email?.message}</p>
-      <button className={classes.btn} type="submit" disabled={isSubmitting}>
+      <button type="submit" disabled={isSubmitting}>
         Order
       </button>
       <p>{isSubmitSuccessful && 'Thanks!'}</p>
         </form>
       </div>
-      <ul>
-        {items.map(item => (
-          <li key={item.id}>
-            {item.name} - Quantity: {item.quantity}
-          </li>
-        ))}
-      </ul>
-    </div>
   );
 }
-}
 
-export default BasketComponent
+export default BasketForm

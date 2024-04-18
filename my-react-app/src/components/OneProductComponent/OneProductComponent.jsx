@@ -9,7 +9,6 @@ import ProductCounter from '../ProductCounter/ProductCounter';
 
 const OneProductComponent = () => {
   const [product, setProduct] = useState(null);
-  // const [cart, setCart] = useState([]);
   const [itemCount, setItemCount] = useState(0);
   const { id } = useParams();
 
@@ -59,8 +58,6 @@ const OneProductComponent = () => {
         <div className={classes.line__ProductsToOneProduct}>
           <hr />
         </div>
-        
-        {/* Добавление товара в корзину */}
         <div className={classes.btn_oneProduct}>
           <button2>One Product</button2>
         </div>
@@ -76,7 +73,7 @@ const OneProductComponent = () => {
             <h5>$ {product.price}</h5>
             <div className="check_out">
             <ProductCounter product={product} itemCount={itemCount} setItemCount={setItemCount} addToCart={addToCart} />
-            < NavLink to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></NavLink>
+            {/* < NavLink to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></NavLink> */}
             </div>
             <h6>Description</h6>
             <h3>{product.description}</h3>

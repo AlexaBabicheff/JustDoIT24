@@ -1,12 +1,13 @@
 .OneProductContainer {
   top: 50px;
-  /* max-width: 1200px; */
+  width: 1200px;
 }
 
 .OneProductsContainerHeader {
   position: absolute;
   display: flex;
   margin: 50px;
+  width: 100%;
 }
 .OneProductImg img {
   width: 600px;

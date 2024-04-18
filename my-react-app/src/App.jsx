@@ -25,7 +25,9 @@ import OneProductComponent from './components/OneProductComponent/OneProductComp
 import FiltersPanel from './components/Filter/FiltersPanel';
 import ProductCounter from './components/ProductCounter/ProductCounter';
 import PanelComponent from './components/SortingFilteringPanel/components/PanelComponent';
-import IconLike from './components/IconLike/IconLike';
+import ProductDetail from './components/BasketComponent/ProductDetail';
+
+// import IconLike from './components/IconLike/IconLike';
 
 function App() {
   return (
@@ -48,7 +50,8 @@ function App() {
           <Route path="/categories" element={<Categories />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/panel-component" element={<PanelComponent />} />
-          <Route path="/icon-like" element={<IconLike />} />
+          <Route path="/product-detail" element={<ProductDetail />} />
+          {/* <Route path="/icon-like" element={<IconLike />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>

@@ -33,8 +33,8 @@ const Form = ({ handleAddUser }) => {
           type="text"
           {...register('firstName', {
             required: true,
-            minLength: { value: 4, message: 'Имя должно быть длинее 3 символов' },
-            maxLength: { value: 10, message: 'Имя должно быть короче 10 символов' },
+            minLength: { value: 4, message: 'The name must be longer than 3 letters' },
+            maxLength: { value: 10, message: 'The name must be shorter than 10 letters' },
           })}
           className={classes.firstName} placeholder='     Name'
         />
@@ -45,10 +45,10 @@ const Form = ({ handleAddUser }) => {
           id="phone"
           type="tel"
           {...register('phoneNumber', {
-            required: 'ПОЛЕ ОБЯЗАТЕЛЬНО',
+            required: 'This field is important',
             pattern: {
               value: /\(?\+\(?49\)?[ ()]?([- ()]?\d[- ()]?){10}/g,
-              message: 'Введите пожалуйста немецкий номер',
+              message: 'Enter please german number',
             },
           })}
           className={classes.phoneNumber} placeholder='     Phone number'
@@ -60,10 +60,10 @@ const Form = ({ handleAddUser }) => {
           id="email"
           type="email"
           {...register('email', {
-            required: 'ПОЛЕ ОБЯЗАТЕЛЬНО',
+            required: 'This field is important',
             pattern: {
               value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-              message: 'Неправильно введен имейл, добавьте точку и домен',
+              message: 'Email is wrong. Add please point and domain',
             },
           })}
           className={classes.email} placeholder='     Email'
@@ -73,7 +73,7 @@ const Form = ({ handleAddUser }) => {
       <button className={classes.btn} type="submit" disabled={isSubmitting}>
         Get a discount
       </button>
-      <p>{isSubmitSuccessful && 'СПАСИБО!'}</p>
+      <p>{isSubmitSuccessful && 'Thank you!'}</p>
     </form>
     </div>
     </main>
