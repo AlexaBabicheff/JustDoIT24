@@ -10,7 +10,9 @@ function PanelComponent() {
         setPriceTo,
         sortByPrice,
         setSortByPrice,
-        handleToggleDiscount
+        hasDiscount,
+        setDiscount
+        // handleToggleDiscount
     } = useSortingFilteringHook();
 
     return (
@@ -22,7 +24,7 @@ function PanelComponent() {
                 <input type="number" value={priceTo} onChange={(e) => setPriceTo(e.target.value)} />
             </div>
             <div className='checkbox'>
-                <label><input type="checkbox" onChange={handleToggleDiscount} />Discounted items</label>
+                <label><input type="checkbox" value={hasDiscount} onChange={(e) => setDiscount(e.target.checked)} />Discounted items</label>
             </div>
             <div>
                 <div className='price_sorting'>
