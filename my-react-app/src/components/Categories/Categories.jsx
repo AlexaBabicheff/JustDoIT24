@@ -18,11 +18,22 @@ const Categories = ({ showAllCategories }) => {
 
   return (
     <div className={classes.categoriesContainer}>
-      <div className={classes.categoriesContainerHeader}>
-       
+       {/* <div className="line">
+        <hr />
+      </div>
+      <div className="btns">
+        {" "}
+        <div className="main_page">
+          <button>
+            <Link to="/">Main Page</Link>
+          </button>
+        </div>
+        <div className="categories_page">
+          <button>Categories</button>
+        </div>
+      </div> */}
+      <div className={classes.categoriesContainerHeader}> 
           <p>Categories</p>
-        
-      
       <div className={`${classes.categoriesCardsContainer} ${(!showAllCategories) ? classes.show4 : ''}`}>
         {categories
           .slice(0, showAllCategories ? categories.length : 4)

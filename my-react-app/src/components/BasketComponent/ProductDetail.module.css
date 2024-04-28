@@ -1,9 +1,75 @@
-*{
-    padding: 0;
-    margin: 0;
-    color: black;
+.basketNavigation{
+    display: flex;
 }
-
-h2{
-    color: black;
+.basketNavigation hr{
+margin-top: 40px;
+}
+.basketButton{
+  margin-top: 30px;
+  border-radius: 10px;
+}
+.basketButton button{
+  border-radius: 10px;
+  border: 1px solid grey;
+  padding: 5px;
+}
+.ProductCounterContainer {
+  display: flex;
+}
+.ProductCounterContainer button {
+  cursor: pointer;
+}
+.ProductCounterContainer button4 {
+  background-color: #ffff;
+  color: grey;
+  border: 1px solid grey;
+  padding: 5px 20px;
+  font-weight: 500;
+  font-size: 36px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.ProductCounterContainer input {
+  width: 80px;
+  padding-left: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: pointer;
+}
+.counter {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  height: auto;
+  background-color: black;
+  color: #ffff;
+}
+.productDetailsContainer {
+  /* top: 50px; */
+  /* width: 1200px; */
+  height: 150px;
+}
+.productDetailsInfo{
+    width: 580px;
+}
+.productDetails {
+    display: flex;
+    align-items: center;
+}
+.productDetails img {
+width: 200px;
+  height: 145px;
+}
+.productDetailsHeader {
+    margin-top: 30px;
+    display: flex;
+    width: 600px;
+    height: 175px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    gap: 25px;
+}
+.closeCard{
+    display: flex;
+    justify-content: flex-end;
 }

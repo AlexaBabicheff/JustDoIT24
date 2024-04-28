@@ -3,17 +3,17 @@ import { useParams, Link } from "react-router-dom";
 import classes from "./OneProductComponent.module.css";
 import { serverUrl } from "../../Config";
 import iconHeart from "../Navigation/HeaderImg/heart.svg";
-import ProductCounter from '../ProductCounter/ProductCounter';
-import FavoriteButton from '../Favorites/FavoriteButton';
+import ProductCounter from "../ProductCounter/ProductCounter";
+import FavoriteButton from "../Favorites/FavoriteButton";
 
 const OneProductComponent = () => {
   const [product, setProduct] = useState(null);
   const [itemCount, setItemCount] = useState(0);
   const { id } = useParams();
- 
-  const addToCart =(productData)=>{
-    console.log('Adding to cart:', productData);
-  }
+
+  const addToCart = (productData) => {
+    console.log("Adding to cart:", productData);
+  };
 
   useEffect(() => {
     const oneProduct = `${serverUrl}products/${id}`;
@@ -51,19 +51,18 @@ const OneProductComponent = () => {
         </div>
         <div className={classes.btn_products}>
           <button2>
-            <Link to="/categories/2">Products</Link>
+            <Link to="/categories/">Products</Link>
           </button2>
         </div>
         <div className={classes.line__ProductsToOneProduct}>
           <hr />
         </div>
-        
-      
+
         <div className={classes.btn_oneProduct}>
           <button2>One Product</button2>
         </div>
       </div>
-      
+
       <div className={classes.OneProductContainer}>
         <div className={classes.OneProductsContainerHeader}>
           <div className={classes.OneProductImg}>
@@ -72,9 +71,13 @@ const OneProductComponent = () => {
           <div className={classes.OneProductDescription}>
             <h2>{product.title}</h2>
             <h5>$ {product.price}</h5>
-            <div className="check_out">
-            <ProductCounter product={product} itemCount={itemCount} setItemCount={setItemCount} addToCart={addToCart} />
-              {/* <Link to="/basket"><button src={iconHeart} alt="basket">Add to cart</button></Link> */}
+            <div className={classes.check_out}>
+              <ProductCounter
+                product={product}
+                itemCount={itemCount}
+                setItemCount={setItemCount}
+                addToCart={addToCart}
+              />
             </div>
             <h6>Description</h6>
             <h3>{product.description}</h3>

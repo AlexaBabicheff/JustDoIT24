@@ -10,7 +10,6 @@ import iconHeart from "../../Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
 import PanelComponent from "../../SortingFilteringPanel/components/PanelComponent";
 
-
 const AllProducts = () => {
   // const { all } = useParams();
   const [products, setProducts] = useState([]);
@@ -53,26 +52,26 @@ const AllProducts = () => {
     <div className="pageBody">
       <div className={classes.productsContainer}>
         <Navigation />
-        <div className="container">
-          <div className="line">
-            <hr />
-          </div>
-          <div className="btns">
-            {" "}
-            <div className="main_page">
-              <button>Main Page</button>
+        <div className={classes.container}>
+          <div className={classes.btns}>
+            <div className={classes.btn_mainPage}>
+              <button2>
+                <Link to="/">Main Page</Link>
+              </button2>
             </div>
-            <div className="all_products_page">
-              <button>All products</button>
+            <div className={classes.line__MinePageToCategories}>
+              <hr />
+            </div>
+            <div className={classes.btn_categories}>
+              <button2>
+                <Link to="/categories-review">All Products</Link>
+              </button2>
             </div>
           </div>
           <h5>All products</h5>
           <PanelComponent />
-          
-          <div className={classes.contact_map}>
-            <Contact />
-            <Map />
-          </div>
+          <Contact />
+          <Map />
         </div>
       </div>
     </div>
@@ -80,4 +79,3 @@ const AllProducts = () => {
 };
 
 export default AllProducts;
-

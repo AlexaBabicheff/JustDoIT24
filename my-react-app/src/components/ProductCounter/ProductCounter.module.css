@@ -2,12 +2,20 @@
   padding: 0;
   margin: 0;
 }
+.ProductTotalContainer{
+  
+}
 .ProductCounterContainer {
   display: flex;
+  position: relative;
   justify-content: space-between;
   max-width: 180px;
   margin-top: 7px;
   margin-left: 40px;
+}
+.ProductCounterContainer button {
+/* position: absolute; */
+cursor: pointer;
 }
 .ProductCounterContainer button4 {
   background-color: #ffff;

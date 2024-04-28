@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./FavoriteDetail.module.css";
 import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
-import iconHeart2 from "../Navigation/HeaderImg/heart2.svg";
+// import iconHeart2 from "../Navigation/HeaderImg/heart2.svg";
+import heartWhite from "../Navigation/HeaderImg/heart_white.png";
 import { serverUrl } from "../../Config";
-
 
 const FavoritesDetail = () => {
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const FavoritesDetail = () => {
 
   const removeItem = (id) => {
     console.log(id);
-    
+
     dispatch(removeItemFromFavorites(id));
   };
 
@@ -55,7 +55,7 @@ const FavoritesDetail = () => {
 
   return (
     <section>
-      <div className="favoritesNavigation">
+      <div className={classes.favoritesNavigation}>
         {/* <div><h7>Favorites</h7></div> */}
         {/* <div className={classes.line}>
           <hr />
@@ -66,42 +66,46 @@ const FavoritesDetail = () => {
           </button>
         </div> */}
       </div>
+      <div className="content_favorite">
       {!items.length || items.length === 0 ? (
         <div className="space_empty">
-          <h2>Here is empty</h2></div>
+          <h2>Here is empty</h2>
+        </div>
       ) : (
         <div className="productDetailsContainer">
-
           {productDetails.map((productDetail) => {
             console.log(productDetail[0]);
             const { id, title, price, discount_price, description, image } =
               productDetail[0];
 
-
             const item = items.find((item) => parseInt(item.id) === id);
 
             if (!item) return null;
 
-          return (
-            <div key={id} className="productDetails">
-              <img src={`${serverUrl}${image}`} alt={title} />
-              <p>ID: {id}</p>
-              <p>Title: {title}</p>
-              <p>Price: ${price}</p>
-              {discount_price && <p>Discount Price: ${discount_price}</p>}
-              <p>Description: {description}</p>
-              <div>
-                  <button4 onClick={() => removeItem(id)}><img src={iconHeart2} alt="favorites" /></button4>
-                  {/* <button onClick={() => removeItem(id)}>Remove from Favorites</button>
+            return (
+              <div className={classes.likedProductContainer}>
+                <div key={id} className={classes.productDetails}>
+                  <img src={`${serverUrl}${image}`} alt={title} />
+                  <div className={classes.likedProduct2}>
+                    <button4 onClick={() => removeItem(id)}>
+                      <img src={heartWhite} alt="favorites" />
+                    </button4>
+                    {/* <button onClick={() => removeItem(id)}>Remove from Favorites</button>
                   <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button> */}
+                  </div>
+                  <p>Title: {title}</p>
+                  <p>Price: ${price}</p>
+                  {discount_price && <p>Discount Price: ${discount_price}</p>}
+                  
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
+      )}
       </div>
-    )}
-  </section>
-);
+    </section>
+  );
 };
 
 export default FavoritesDetail;

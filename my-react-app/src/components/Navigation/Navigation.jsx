@@ -34,14 +34,11 @@ const Navigation = () => {
               x
             </span>
             <p>50% discount on product of the day!</p>
-            {/* <div className={styles.logo_image}>
-              <img src={modalWindow} alt="50%off" />
-            </div> */}
                         <div className={styles.modal_content}>
                         <h4>If you order 3 wares, you can get 50% OFF for some 4th one!</h4>
 
               <div className="cardProd">
-                {product && <img src={"http://127.0.0.1:3333" + product.image} alt={product.title} />}
+                {product && <img src={`http://127.0.0.1:3333`+product.image} alt={product.title} />}
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import Map from "../../Map/Map";
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import classes from "./CategoriesReview.module.css";
-import ButtonsCategories from "../../ButtonsCategories/ButtonsCategories";
+import BreadCrumbs from "../../BreadCrumbs/ButtonsAllSales";
 // import Mind_map from "../../Min_map/Mind_map";
 
 const CategoriesReview = () => {
@@ -13,7 +13,7 @@ const CategoriesReview = () => {
     <div className="pageBody">
       <div className={classes.productsContainer}>
       <Navigation />
-      {/* <ButtonsCategories /> */}
+      <BreadCrumbs />
       <Categories showAllCategories={true} />
       <div className={classes.contact_map}>
       <Contact />

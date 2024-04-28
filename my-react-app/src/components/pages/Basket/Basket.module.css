@@ -9,3 +9,8 @@
   .calculateItems h2{
     color: blue;
   }
+  .locationForm{
+    display: flex;
+    gap: 30px;
+    top: 100px;
+  }

@@ -11,7 +11,13 @@
 }
 
 .location{
-    top: 20px;
+    /* top: 20px; */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
 }
 
 .map img{

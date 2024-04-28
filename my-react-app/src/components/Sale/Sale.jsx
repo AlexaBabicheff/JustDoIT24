@@ -29,7 +29,7 @@ const Sale = () => {
     };
 
     return (
-        <div className={classes.saleContainer__pageBody}>
+        <div className={classes.saleContainer}>
                 <div className={classes.saleContainerHeader}>
                     <div><h7>Sale</h7></div>
                     <div className={classes.line}><hr /></div>
