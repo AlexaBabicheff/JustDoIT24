@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: none;
-  font-family: Montserrat;
-}
-
 .saleContainer {
   display: flex;
   margin-left: auto;
@@ -71,6 +64,8 @@ button a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 .saleCard img {
   max-width: 100%;
@@ -139,10 +134,11 @@ button a {
   transform: translateY(50%);
 }
 
-@media only screen and (min-width: 1001px) and (max-width: 1300px) {
+@media only screen and (min-width: 1001px) and (max-width: 1440px) {
   .saleContainer {
-    /* width: 50%; */
-    /* margin-left: -20px; */
+    width: 50%; 
+    width: 1200px;
+  gap: 20px;
   }
   .line hr {
     width: 630px;
@@ -168,5 +164,28 @@ button a {
     gap: 1px;
     /* position: relative; */
     /* margin-left: 50px; */
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+  body {
+    font-size: 16px;
+    background-color: green;
+  }
+}
+
+/* 480px - 767px */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 14px;
+    background-color: rosybrown;
+  }
+}
+
+/* > 360px */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    font-size: 12px;
+    background-color: blueviolet;
   }
 }

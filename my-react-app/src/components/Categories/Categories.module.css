@@ -1,10 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Montserrat;
-}
-
 .categoriesContainer {
   margin-top: 60px;
 }
@@ -31,6 +24,7 @@
 .categoriesCardsContainer {
   justify-content: space-evenly;
   width: 1250px;
+  flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-content: center;
@@ -50,6 +44,8 @@
   justify-content: space-between;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
 }
 .categoriesCardText {
   display: flex;
@@ -70,9 +66,8 @@
 }
 
 @media only screen and (min-width: 1001px) and (max-width: 1440px) {
-  .categoriesContainer {
-    /* width: 50%; */
-    /* margin-left: -20px; */
+  .categoriesCard {
+    width: 90%;
   }
   .line hr {
     width: 430px;
@@ -82,18 +77,32 @@
   .categoriesButton button {
     left: 800px;
   }
+  .categoriesCardsContainer {
+    width: 80%;
+    gap: 2%;
+  }
+  .categoriesCardsContainer.show4 {
+    gap: 2px;  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
-  .categoriesCardsContainer.show4 {
+  .categoriesCard {
+    width: 80%;
+  }
+  .categoriesCardsContainer {
+    width: 80%;
+  }
+  .categoriesCardsContainer.show4{
     grid-template-columns: repeat(3, 1fr);
+    padding-right: 200px;
   }
   .categoriesContainerHeader p {
     font-size: 56px;
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .categoriesCardsContainer.show4 {
-    grid-template-columns: repeat(2, 1fr);
+  .categoriesCardsContainer.show4{
+    grid-template-columns: repeat(1, 1fr);
+    padding-right: 1000px;
   }
   .categoriesCardsContainer {
     margin-left: 30px;
@@ -104,12 +113,12 @@
 }
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-  .categoriesCardsContainer.show4 {
+  .categoriesCardsContainer.show4{
     grid-template-columns: repeat(1, 1fr);
+    padding-right: 1000px;
   }
   .categoriesContainer {
     width: 50%;
-    /* margin-left: -20px; */
   }
   .categoriesCardsContainer {
     margin-left: 100px;
@@ -120,14 +129,18 @@
   }
 }
 @media only screen and (max-width: 360px) {
-  .categoriesCardsContainer.show4 {
+  .categoriesCardsContainer.show4{
     grid-template-columns: repeat(1, 1fr);
+    padding-right: 1000px;
+  }
+  .categoriesContainer {
+    width: 50%;
   }
   .categoriesCardsContainer {
-    margin-left: 70px;
+    margin-left: 100px;
   }
   .categoriesContainerHeader p {
-    font-size: 24px;
-    margin-left: 30px;
+    font-size: 36px;
+    padding-left: 70px;
   }
 }

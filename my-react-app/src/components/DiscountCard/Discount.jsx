@@ -18,7 +18,7 @@ const Form = ({ handleAddUser }) => {
 
   return (
     <main>
-      <h2>5% off on the first order</h2>
+      <h2>5% off on the first order!</h2>
       <div className={classes.content}>
         <img src={discount} alt="" />
       </div>
