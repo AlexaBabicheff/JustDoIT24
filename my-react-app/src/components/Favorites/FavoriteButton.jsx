@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 
 import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
-import iconHeart1 from './../Navigation/HeaderImg/heart1.svg'; 
-import iconHeart2 from './../Navigation/HeaderImg/heart2.svg'; 
+import iconHeart1 from './../Navigation/HeaderImg/heart_white.png'; 
+import iconHeart2 from './../Navigation/HeaderImg/heart_green.png'; 
 
 const FavoriteButton = () => {
   const [product, setProduct] = useState(null);
@@ -35,7 +35,7 @@ const FavoriteButton = () => {
 
   return (
     <button onClick={handleClick}>
-      <img src={isItemInFavorites ? {iconHeart1} : {iconHeart2}} alt="favorites" />
+      <img src={isItemInFavorites ? iconHeart1 : iconHeart2} alt="favorites" />
     </button>
   );
 };

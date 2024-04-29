@@ -1,10 +1,60 @@
 .productsContainer {
-  /* display: flex; */
   width: 1200px;
   flex-direction: column;
   align-items: center;
-  padding-left: 50px;
 }
+/* ____ */
+
+/* кнопки для переключения между страницами*/
+.btns {
+  position: relative;
+}
+.btns button2 {
+  padding-top: 200px;
+  background-color: #fffff1;
+  height: 30px;
+  padding: 5px 20px;
+  border-radius: 10px;
+  position: absolute;
+  text-decoration: none;
+  margin-top: -40px;
+}
+.btns button2:hover {
+  font-weight: 600;
+  color: #0e0101;
+  border: 1px solid rgb(24, 3, 3);
+}
+.btn_mainPage button2,
+.btn_categories button2 {
+  border: 1px solid rgb(208, 203, 203);
+  font-weight: 500;
+  color: rgb(183, 177, 177);
+}
+.btn_mainPage button2 :hover,
+.btn_categories button2 :hover {
+  font-weight: 600;
+  color: rgb(19, 7, 7);
+}
+.btns a {
+  color: rgb(183, 177, 177);
+}
+.btn_mainPage button2 {
+  margin-left: 55px;
+}
+.btn_categories button2 {
+  margin-left: 255px;
+  top: 0px;
+}
+.line__MinePageToCategories hr {
+  position: absolute;
+ margin-top: -20px;
+ margin-left: 180px;
+}
+.container{
+  margin-top: 60px;
+}
+/* ____ */
+
 h5 {
   margin-top: 20px;
   font-weight: 700;
@@ -96,9 +146,6 @@ select {
 .price {
   font-weight: 600;
   font-size: 24px;
-}
-
-.contact_map {
 }
 .productSort {
   display: flex;

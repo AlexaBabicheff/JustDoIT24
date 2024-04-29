@@ -1,4 +1,4 @@
-
+// Алеся
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -20,7 +20,7 @@ import OneProduct from './components/pages/OneProduct/OneProduct';
 import NotFound from './components/pages/NotFound/NotFound';
 
 import BasketForm from './components/BasketForm/BasketForm';
-import ButtonsCategories from './components/ButtonsCategories/ButtonsCategories'
+import BreadCrumbs from './components/BreadCrumbs/ButtonsCategories'
 import Categories from './components/Categories/Categories';
 import CategoryProducts from './components/CategoryProducts/CategoryProducts';
 import OneProductComponent from './components/OneProductComponent/OneProductComponent';
@@ -40,7 +40,7 @@ function App() {
           <Route path="/basket" element={<Basket />} />
           <Route path="/basket-form" element={<BasketForm />} />
           <Route path="/burger-menu" element={<BurgerMenu />} />
-          <Route path="/buttons-categories" element={<ButtonsCategories />} />
+          <Route path="/bread-crumbs" element={<BreadCrumbs />} />
           <Route path="/filters-panel" element={<FiltersPanel />} />
           <Route path="/categories-goods" element={<CategoriesGoods />} />
           <Route path="/categories-review" element={<CategoriesReview />} />

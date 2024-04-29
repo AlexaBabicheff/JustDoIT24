@@ -1,6 +1,6 @@
 .OneProductContainer {
   top: 50px;
-  /* max-width: 1200px; */
+  /* width: 1200px; */
   height: 50px;
 }
 
@@ -16,7 +16,6 @@
 
 .OneProductDescription {
   width: 600px;
-  /* height: 400px; */
 }
 /* title */
 .OneProductDescription h2 {
@@ -55,10 +54,10 @@
   margin-top: 5px;
   margin-left: 20px;
 }
-.check_out {
-  display: flex;
-}
 .OneProductDescription button {
+  display: flex;
+  margin-left: 50%;
+  margin-top: -55px;
   width: 220px;
   height: 50px;
   color: white;
@@ -72,7 +71,6 @@
   border: none;
   background: rgb(147, 165, 77);
   top: 145px;
-  margin-left: 840px;
 }
 .iconAndTitle img {
   width: 50px;

@@ -3,8 +3,104 @@
   margin: 0;
   color: black;
 }
+.content_favorite{
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+
+}
 .space_empty h2 {
   font-weight: 700;
   font-size: 36px;
   color: black;
+}
+section{
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+  width: 100%;
+  
+}
+.likedProductContainer{
+  margin-top: 30px; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.likedProductContainer h3 {
+  width: 250px;
+  height: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.productDetailsContainer{
+  /* display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between; */
+}
+.productDetailsContainer h3:hover {
+  white-space: normal;
+  overflow: visible;
+  height: 70px;
+}
+
+.productDetails img {
+  max-width: 100%;
+  height: auto;
+  border: 0px, 0px, 1px, 0px;
+  border-radius: 10px;
+  z-index: 5;
+  color: white;
+}
+.productDetails {
+   position: relative;
+   width: 290px;
+   border: 3px green solid;
+   margin-bottom: 20px;
+   border: 1px solid #dddddd;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.likedProduct2{
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  z-index: 10;
+}
+
+.likedProductContainer {
+  display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/* Стили для каждой карточки товара */
+.productDetails {
+  width: 30%; /* Ширина каждой карточки (можете настроить по своему усмотрению) */
+  margin-bottom: 20px; /* Пространство между карточками */
+  padding: 10px; /* Внутренний отступ внутри карточки */
+  border: 1px solid #ccc; /* Граница для карточки */
+  border-radius: 5px; /* Скругленные углы */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+}
+
+/* Стили для изображения внутри карточки */
+.productDetails img {
+  width: 100%; /* Заполняет всю доступную ширину */
+  height: auto; /* Автоматически рассчитывает высоту, чтобы сохранить пропорции */
+}
+
+/* Стили для текстового содержимого внутри карточки */
+.productDetails p {
+  margin: 5px 0; /* Пространство вокруг текста */
 }

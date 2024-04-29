@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 // import ProductDetailsModal from './ProductDetailsModal';
-import styles from "./SaleProducts.module.css";
+import classes from "./SaleProducts.module.css";
 import { serverUrl } from "../../Config";
-import iconBag from "../../components/Navigation/HeaderImg/icons.png";
-import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
+import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
+import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
 import { NavLink } from "react-router-dom";
-
 
 const formatPrice = (price) => `${price.toFixed(2)}$`;
 
@@ -32,46 +31,70 @@ const SaleProducts = () => {
         console.error("Ошибка загрузки данных о продуктах:", error)
       );
   }, []);
+  const calculateDiscountPercentage = (price, discountPrice) => {
+    const discount = price - discountPrice;
+    const discountPercentage = Math.round((discount / price) * 100);
+    return discountPercentage;
+};
 
   return (
     <>
-      <div className={styles.pageBody}>
-        <div className={styles.saleProductContainer}>
+      <div className={classes.containerSale}>
+
+       {/* Bread Crumbs  */}
+
+      <div className={classes.btns}>
+        <div className={classes.btn_mainPage}>
+          <button2>
+            <Link to="/">Main Page</Link>
+          </button2>
+        </div>
+        <div className={classes.line__MinePageToAllSales}>
+          <hr />
+        </div>
+        <div className={classes.btn_allSales}>
+          <button2>
+            <Link to="/categories-review">All Sales</Link>
+          </button2>
+        </div>
+      </div>
+
+        <h5>Discounted items</h5>
+        <div className={classes.saleProductContainer}>
           {products.map((product) => (
-            <Link
+            <NavLink
               key={product.id}
               to={`/one-product/${product.id}`}
-              className={styles.saleProductCard}
+              className={classes.saleProductCard}
             >
-              <img
-                  src={`${serverUrl}/${product.image}`}
-                  alt={product.title}
-                />
-              {/* <div className={styles.likedAndBasket}> */}
-                <div>
-                < NavLink to="/favorites"><img className={styles.likedProduct1} src={iconHeart} alt="favorites" /></NavLink>
-                </div>
-                <div>
-
-                 <NavLink to="/basket"><img className={styles.basketProduct1} src={iconBag} alt="shopping_cart" /></NavLink>
-                   </div>
-              {/* </div> */}
+              <img src={`${serverUrl}/${product.image}`} alt={product.title} />
+              <div className={classes.discountLabel}>- { calculateDiscountPercentage(product.price, product.discont_price) }%</div>
+              <div>
+                <NavLink to="/favorites">
+                  <img
+                    className={classes.likedProduct1}
+                    src={whiteHeart}
+                    alt="favorites"
+                  />
+                </NavLink>
+              </div>
+              <div>
+                <NavLink to="/basket">
+                  <img
+                    className={classes.basketProduct1}
+                    src={whiteBag}
+                    alt="shopping_cart"
+                  />
+                </NavLink>
+              </div>
               <h3>{product.title}</h3>
+              <div className={classes.priceInfo}>
               <p>Price: ${product.price}</p>
-            </Link>
+              <div className={classes.dicountPrice}>${product.discont_price}</div>
+              </div>
+            </NavLink>
           ))}
-          {/* <div className={styles.discountPercent}>
-                  -{calculateDiscountPercent(product.price, product.discont_price)}%
-                </div>
-                <div className={styles.description}>
-                <div className={styles.title}>{product.title}</div>
-                <div className={styles.priceInfo}>
-                    <div className={styles.price}>${product.price}</div>
-                    <div className={styles.dicountPrice}>${product.discont_price}</div>
-                </div>
-            </div> */}
         </div>
-        ))
       </div>
     </>
   );

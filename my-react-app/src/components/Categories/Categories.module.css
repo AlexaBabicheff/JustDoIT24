@@ -6,8 +6,7 @@
 }
 
 .categoriesContainer {
-  display: flex;
-  flex-direction: column;
+  margin-top: 60px;
 }
 .line hr {
   border: 1px solid #dddddd;
@@ -17,44 +16,46 @@
   margin-bottom: 30px;
 }
 .categoriesContainerHeader p {
-  margin-left: 30px;
+  margin-left: 70px;
+  margin-bottom: 20px;
   font-weight: 700;
   font-size: 64px;
 }
 .categoriesContainerHeader {
   position: relative;
-  justify-content:space-around;
+  justify-content: space-around;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 30px;
-  padding-bottom: 30px;
   width: 100%;
 }
 
 .categoriesCardsContainer {
- display: grid;
- grid-template-columns: repeat(5, 1fr);
+  justify-content: space-evenly;
+  width: 1250px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
-.categoriesCardsContainer.show4{
+.categoriesCardsContainer.show4 {
   grid-template-columns: repeat(4, 1fr);
 }
-
 .categoriesCard {
-  width: 220px;
+  width: 240px;
   height: 270px;
   border-bottom: 1px solid #8b8b8b;
   border-radius: 10px;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   align-items: center;
 }
-
 .categoriesCardText {
   display: flex;
   flex-direction: column;
   align-items: center;
-  }
+}
 
 .title {
   font-weight: 500;
@@ -83,7 +84,7 @@
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
-  .categoriesCardsContainer.show4{
+  .categoriesCardsContainer.show4 {
     grid-template-columns: repeat(3, 1fr);
   }
   .categoriesContainerHeader p {
@@ -91,7 +92,7 @@
   }
 }
 @media only screen and (min-width: 481px) and (max-width: 768px) {
-  .categoriesCardsContainer.show4{
+  .categoriesCardsContainer.show4 {
     grid-template-columns: repeat(2, 1fr);
   }
   .categoriesCardsContainer {
@@ -103,7 +104,7 @@
 }
 
 @media only screen and (min-width: 361px) and (max-width: 480px) {
-  .categoriesCardsContainer.show4{
+  .categoriesCardsContainer.show4 {
     grid-template-columns: repeat(1, 1fr);
   }
   .categoriesContainer {
@@ -119,7 +120,7 @@
   }
 }
 @media only screen and (max-width: 360px) {
-  .categoriesCardsContainer.show4{
+  .categoriesCardsContainer.show4 {
     grid-template-columns: repeat(1, 1fr);
   }
   .categoriesCardsContainer {

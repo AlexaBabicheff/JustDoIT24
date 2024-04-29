@@ -8,8 +8,10 @@ import Navigation from "../../Navigation/Navigation";
 const Basket = () => (
    <div className="pageBody">
      <Navigation />
-      <ProductDetail />
+     <div className={classes.locationForm}>
+     <ProductDetail />
       <BasketForm />
+     </div>
       {/* <Contact /> */}
     </div>
   );

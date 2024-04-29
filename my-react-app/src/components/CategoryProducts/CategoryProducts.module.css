@@ -12,13 +12,14 @@
   margin: 15px 50px;
 }
 .CategoryProductsContainerHeader {
-  margin-top: 130px;
+  margin-top: 100px;
  }
 .CategoryProductsContainerHeader h1 {
   color: rgb(45, 42, 42);
   font-size: 36px;
   font-weight: 700;
-  padding-top: 120px;
+  padding-top: 80px;
+  margin-left: 70px;
 }
 .ProductsContainer {
   display: flex;
@@ -79,13 +80,11 @@
   right: 5px;
   z-index: 1;
 }
-
 /* кнопки для переключения между страницами*/
-.btns_prod {
-  /* position: relative; */
-  cursor: pointer;
+.btns {
+  position: relative;
 }
-.btns_prod button3 {
+.btns button2 {
   padding-top: 200px;
   background-color: #fffff1;
   height: 30px;
@@ -93,56 +92,57 @@
   border-radius: 10px;
   position: absolute;
   text-decoration: none;
-  cursor: pointer;
 }
-.btns_prod button3:hover {
+.btns button2:hover {
   font-weight: 600;
   color: #0e0101;
   border: 1px solid rgb(24, 3, 3);
 }
-.btn_mainPage button3,
-.btn_categories button3{
+button2{
+  cursor: pointer;
+}
+.btn_mainPage button2,
+.btn_categories button2,
+.btn_products button2 {
   border: 1px solid rgb(208, 203, 203);
   font-weight: 500;
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button3 :hover,
-.btn_categories button3 :hover{
+.btn_mainPage button2 :hover,
+.btn_categories button2 :hover,
+.btn_products button2 :hover {
   font-weight: 600;
   color: rgb(19, 7, 7);
 }
-.btns_prod a {
+.btns a {
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button3 {
-  margin-left: 55px;
+.btn_mainPage button2 {
+  left: -400px;
 }
-.btn_categories button3 {
-  margin-left: 255px;
-  /* top: 100px; */
+.btn_categories button2 {
+  left: -200px;
 }
-.btn_products{
-  top: 20px;
+.btn_products button2 {
+  margin-left: 455px;
 }
-.btn_products button3 {
+.line {
   position: absolute;
-  border: 1px solid #171716;
-  border-radius: 7px;
-  background-color: #fffff1;
-  font-size: 20px;
-  font-weight: 500;
-  width: 125px;
-  height: 25px;
-  margin-top: -12px;
-  color: rgb(69, 62, 62);
-  margin-left: 355px;
-  padding-left: 15px;
+  top: 15px;
+}
+.line__MinePageToCategories hr,
+.line__CategoriesToProducts hr{
+  position: absolute;
+  top: 15px;
 }
 /* линии соединения кнопок-переключателей */
+hr {
+  width: 100px;
+}
+.line__MinePageToCategories hr {
+  left: 181px;
+}
 .line__CategoriesToProducts hr {
-  /* position: absolute; */
-  margin-top: 30px;
-  margin-left: 30px;
-  width: 350px;
+  left: 380px;
 }
 
