@@ -6,31 +6,24 @@ const Form = ({ handleAddUser }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors, defaultValues, isSubmitSuccessful, isSubmitting, isValid },
+    formState: { errors, isSubmitSuccessful, isSubmitting },
     reset,
-    getValues,
-  } = useForm({
-    // defaultValues: {
-    //   firstName: '',
-    //   phoneNumber: 'Phone number',
-    //   email: 'Email'
-    // },
-  })
+  } = useForm();
 
   const handleUserSubmit = (data) => {
-    handleAddUser(data)
-    reset()
-  }
-  console.log(getValues()) 
+    handleAddUser(data);
+    localStorage.setItem('userData', JSON.stringify(data)); // Сохраняем в local storage
+    reset();
+  };
+
   return (
     <main>
-      
-     <h2>5% off on the first order</h2>
+      <h2>5% off on the first order!</h2>
       <div className={classes.content}>
-      < img src={discount} alt="" />
+        <img src={discount} alt="" />
       </div>
-    
-    <form onSubmit={handleSubmit(handleUserSubmit)} className={classes.form}>
+
+      <form onSubmit={handleSubmit(handleUserSubmit)} className={classes.form}>
       <label htmlFor="firstName">
         <input
           id="firstName"
@@ -74,14 +67,14 @@ const Form = ({ handleAddUser }) => {
         />
       </label>
       <p style={{ color: 'red' }}>{errors.email?.message}</p>
-      <button className={classes.btn} type="submit" disabled={isSubmitting}>
-        Get a discount
-      </button>
-      <p>{isSubmitSuccessful && 'СПАСИБО!'}</p>
-    </form>
-    {/* </div> */}
+
+        <button className={classes.btn} type="submit" disabled={isSubmitting}>
+          Get a discount
+        </button>
+        <p>{isSubmitSuccessful && 'СПАСИБО!'}</p>
+      </form>
     </main>
-  )
-}
+  );
+};
 
 export default Form;

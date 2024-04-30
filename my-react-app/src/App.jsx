@@ -11,7 +11,7 @@ import AllSales from './components/pages/AllSales/AllSales';
 
 import Favorites from './components/pages/Favorites/Favorites';
 import Basket from './components/pages/Basket/Basket';
-
+import UsersPage from './components/pages/UsersPage'
 
 
 import BurgerMenu from './components/pages/BurgerMenu/BurgerMenu';
@@ -57,6 +57,8 @@ function App() {
           <Route path="/favorite-detail" element={<FavoriteDetail />} />
           <Route path="/favorite-button" element={<FavoriteButton />} /> 
           <Route path="*" element={<NotFound />} />
+          <Route path="/users-page" element={<UsersPage />} />
+          
         </Routes>
       </Router>
     </div>

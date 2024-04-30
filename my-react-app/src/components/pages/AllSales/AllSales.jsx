@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import BreadCrumbs from "../../BreadCrumbs/ButtonsAllSales"
 const AllSales = () => (
   <div className={classes.pageBody}>
-    {/* <div className={style}> */}
     <Navigation />
     {/* <ButtonsAllSales /> */}
     <BreadCrumbs />
