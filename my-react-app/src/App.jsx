@@ -30,12 +30,14 @@ import PanelComponent from './components/SortingFilteringPanel/components/PanelC
 import ProductDetail from './components/BasketComponent/ProductDetail';
 import FavoriteDetail from './components/Favorites/FavoriteDetail';
 import FavoriteButton from './components/Favorites/FavoriteButton';
+import ThemeSwitcher from './components/ThemeSwitcher/components/ThemeSwitcher';
 
 function App() {
   return (
     <div className="container">
       <Router>
         <Routes>
+          <Route path="/theme_switcher" element={<ThemeSwitcher />} />
           <Route path="/" element={<MainPage />} />
           <Route path="/basket" element={<Basket />} />
           <Route path="/basket-form" element={<BasketForm />} />
