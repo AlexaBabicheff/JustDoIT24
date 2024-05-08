@@ -1,11 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
+import uiReducer from './../components/ThemeSwitcher/reducers/ui';
+import productsReducer from './../components/ThemeSwitcher/reducers/products';
 import BasketReducer from './../components/BasketComponent/BasketReducer';
 import FavoriteReducer from '../components/Favorites/FavoriteReducer';
-// import { serverUrl } from '../Config';
-
 
 const store = configureStore({
-    reducer:{
+    reducer: {
+        ui: uiReducer,
+        products: productsReducer,
         basket: BasketReducer,
         favorites: FavoriteReducer,
     },

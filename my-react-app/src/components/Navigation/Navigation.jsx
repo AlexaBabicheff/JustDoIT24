@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { useParams, Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
 import logoImg from "./HeaderImg/logo.svg";
 import iconHeart from "./HeaderImg/heart.svg";
 import iconBag from "./HeaderImg/icons.png";
 import BtnDarkMode from "./btnDarkMode/BtnDarkMode";
+import { serverUrl } from "./../../Config.js";
 import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Button1DayDiscount from "./Button1DayDiscount/Button1DayDiscount";
@@ -13,20 +15,19 @@ import { useSelector } from "react-redux"; // Импорт useSelector из reac
 const Navigation = () => {
   const [nav, setNav] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [products, setProducts] = useState([]); // Исправлено на пустой объект {}
+  const [product, setProduct] = useState(null);
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch("http://127.0.0.1:3333/product/1")
+    fetch(`${serverUrl}products/1`)
       .then((response) => response.json())
       .then((data) => {
-        setProducts(data); // Установка всего объекта данных, а не только data.image
+        setProduct(data[0]);
       })
       .catch((error) => console.error(error));
-  }, []);
-  
-// modal window
+  }, [id]);
+
   const Modal = ({ showModal, setShowModal, product }) => {
-    console.log("http://127.0.0.1:3333/" + products.image)
     console.log(product);
     return (
       showModal && (
@@ -36,11 +37,10 @@ const Navigation = () => {
               x
             </span>
             <p>50% discount on product of the day!</p>
-                        <div className={styles.modal_content}>
-                        <h4>If you order 3 wares, you can get 50% OFF for some 4th one!</h4>
-
+            <div className={styles.modal_content}>
+              <h4>If you order 3 wares, you can get 50% OFF for some 4th one!</h4>
               <div className="cardProd">
-                {product && <img src={`http://127.0.0.1:3333`+product.image} alt={product.title} />}
+                {product && <img src={`${serverUrl}/${product.image}`} alt={product.title} />}
               </div>
             </div>
           </div>
@@ -48,8 +48,6 @@ const Navigation = () => {
       )
     );
   };
-  // new
-  const favoritesCount = useSelector(state => state.favorites.count); // Получаем количество понравившихся товаров из Redux store
 
   return (
     <header className={styles.header}>
@@ -83,7 +81,7 @@ const Navigation = () => {
         <Modal
           showModal={showModal}
           setShowModal={setShowModal}
-          product={products}
+          product={product}
         />
       </div>
           </ul>
