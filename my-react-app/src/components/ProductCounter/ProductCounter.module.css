@@ -3,7 +3,7 @@
   margin: 0;
 }
 .ProductTotalContainer{
-  
+  width: 500px;
 }
 .ProductCounterContainer {
   display: flex;
@@ -13,8 +13,7 @@
   margin-top: 7px;
   margin-left: 40px;
 }
-.ProductCounterContainer button {
-/* position: absolute; */
+button {
 cursor: pointer;
 }
 .ProductCounterContainer button4 {
@@ -42,4 +41,17 @@ cursor: pointer;
   height: auto;
   background-color: black;
   color: #ffff;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1000px) {
+  .ProductTotalContainer{
+    width: 800px;
+  }
+}
+
+@media only screen and (min-width: 361px) and (max-width: 768px) {
+ 
+}
+@media only screen and (max-width: 360px) {
+  
 }

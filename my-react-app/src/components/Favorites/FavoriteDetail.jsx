@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import classes from "./FavoriteDetail.module.css";
 import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
 // import iconHeart2 from "../Navigation/HeaderImg/heart2.svg";
-import heartWhite from "../Navigation/HeaderImg/heart_white.png";
+import heartGreen from "../Navigation/HeaderImg/heart_green.png";
 import { serverUrl } from "../../Config";
 
 const FavoritesDetail = () => {
@@ -88,7 +88,7 @@ const FavoritesDetail = () => {
                   <img src={`${serverUrl}${image}`} alt={title} />
                   <div className={classes.likedProduct2}>
                     <button4 onClick={() => removeItem(id)}>
-                      <img src={heartWhite} alt="favorites" />
+                      <img src={heartGreen} alt="favorites" />
                     </button4>
                     {/* <button onClick={() => removeItem(id)}>Remove from Favorites</button>
                   <button onClick={() => addItem(item, 1)}><NavLink to="/favorites"><img src={iconHeart} alt="favorites" /></NavLink></button> */}

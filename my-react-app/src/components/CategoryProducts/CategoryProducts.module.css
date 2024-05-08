@@ -83,6 +83,7 @@
 /* кнопки для переключения между страницами*/
 .btns {
   position: relative;
+  padding-top: 10px;
 }
 .btns button2 {
   padding-top: 200px;

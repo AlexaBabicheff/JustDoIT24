@@ -8,6 +8,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Button1DayDiscount from "./Button1DayDiscount/Button1DayDiscount";
 import modalWindow from "./HeaderImg/50% off.png";
+import { useSelector } from "react-redux"; // Импорт useSelector из react-redux
 
 const Navigation = () => {
   const [nav, setNav] = useState(false);
@@ -22,7 +23,8 @@ const Navigation = () => {
       })
       .catch((error) => console.error(error));
   }, []);
-
+  
+// modal window
   const Modal = ({ showModal, setShowModal, product }) => {
     console.log("http://127.0.0.1:3333/" + products.image)
     console.log(product);
@@ -46,6 +48,8 @@ const Navigation = () => {
       )
     );
   };
+  // new
+  const favoritesCount = useSelector(state => state.favorites.count); // Получаем количество понравившихся товаров из Redux store
 
   return (
     <header className={styles.header}>

@@ -1,42 +1,44 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams, Link } from "react-router-dom";
-
+import { useParams } from "react-router-dom";
 import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
-import iconHeart1 from './../Navigation/HeaderImg/heart_white.png'; 
-import iconHeart2 from './../Navigation/HeaderImg/heart_green.png'; 
+import iconHeart1 from "./../Navigation/HeaderImg/heart_white.png";
+import iconHeart2 from "./../Navigation/HeaderImg/heart_green.png";
 
 const FavoriteButton = () => {
-  const [product, setProduct] = useState(null);
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0); // Инициализируем счетчик понравившихся товаров
+
   const { id } = useParams();
-  console.log(id);
-
   const dispatch = useDispatch();
-  const favorites = useSelector(state => state.favorites.items);
+  const favorites = useSelector((state) => state.favorites.items);
 
-  console.log('favorites', favorites);
-  const isItemInFavorites = (favorites.find(favorite => favorite.id === id)) ? true : false;
+  const isItemInFavorites = favorites.some((favorite) => favorite.id === id);
 
-  console.log('isItemInFavorites', isItemInFavorites);
+  const updateFavoriteCount = () => {
+    const count = favorites.length; // Получаем количество понравившихся товаров
+    setCount(count); // Обновляем счетчик
+  };
 
-//  const [isButtonClicked, setIsButtonClicked] = useState(isItemInFavorites);
+  useEffect(() => {
+    updateFavoriteCount(); // Вызываем функцию для обновления счетчика при загрузке компонента
+  }, [favorites]); // Отслеживаем изменения в избранных товарах
 
   const handleClick = () => {
-    console.log(id);
     if (isItemInFavorites) {
       dispatch(removeItemFromFavorites(id));
     } else {
       const item = { id };
       dispatch(addItemToFavorites(item));
     }
-//    setIsButtonClicked(!isButtonClicked);
   };
 
   return (
-    <button onClick={handleClick}>
-      <img src={isItemInFavorites ? iconHeart1 : iconHeart2} alt="favorites" />
-    </button>
+    <div>
+      <button onClick={handleClick}>
+        <img src={isItemInFavorites ? iconHeart2 : iconHeart1} alt="favorites" />
+      </button>
+      <p>Количество понравившихся товаров: {count}</p>
+    </div>
   );
 };
 
