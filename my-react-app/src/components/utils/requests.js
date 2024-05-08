@@ -1,7 +1,8 @@
+import { serverUrl } from "../../Config";
 
 export const fetchUsers = async (setUserList) => {
     try {
-      const response = await fetch('http://127.0.0.1:3333/sale')
+      const response = await fetch(`${serverUrl}sale`)
       if (!response.ok) throw new Error('не получилось забрать пользователей')
       const data = await response.json()
       setUserList(data.sale)
@@ -11,7 +12,7 @@ export const fetchUsers = async (setUserList) => {
   }
   
   export const fetchSingleUser = async (id, setUser) => {
-    const response = await fetch(`http://127.0.0.1:3333/sale/${id}`)
+    const response = await fetch(`${serverUrl}sale/${id}`)
     const data = await response.json()
     console.log(data)
     setUser(data)
@@ -22,7 +23,7 @@ export const fetchUsers = async (setUserList) => {
   // результат/ответ вывводим в консоль
   export const addUser = async (newUser) => {
     try {
-      const response = await fetch('http://127.0.0.1:3333/sale/send', {
+      const response = await fetch(`${serverUrl}sale/send`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newUser),

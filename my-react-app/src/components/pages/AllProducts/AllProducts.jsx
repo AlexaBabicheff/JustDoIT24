@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../../Navigation/Navigation";
 import classes from "./AllProducts.module.css";
 import { useParams, Link } from "react-router-dom";
-import { serverUrl } from "../../../Config";
+import { serverUrl } from './../../../Config.js';
 import Contact from "../../Contact/Contact";
 import Map from "../../Map/Map";
 import iconBag from "../../Navigation/HeaderImg/icons.png";
@@ -22,11 +22,16 @@ const AllProducts = () => {
   const allProductsURL = `${serverUrl}products/all`;
   useEffect(() => {
     fetch(allProductsURL)
-      .then((response) => response.json())
-      .then((data) => setProducts(data))
-      .catch((error) =>
-        console.error("Ошибка загрузки данных о продуктах:", error)
-      );
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP error\! status: $\{response\.status\}`);
+      }
+      return response.json();
+    })
+    .then((data) => setProducts(data))
+    .catch((error) =>
+      console.error("Ошибка загрузки данных продуктов:", error)
+    );
   }, []);
 
   const openProductDetails = (product) => {};

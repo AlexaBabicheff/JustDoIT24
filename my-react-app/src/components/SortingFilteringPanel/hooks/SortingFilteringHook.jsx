@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { setCheckboxValue } from '../actions';
+import { serverUrl } from '../../../Config';
 
 const useSortingFilteringHook = () => {
     const [filteredData, setFilteredData] = useState([]);
@@ -12,7 +13,7 @@ const useSortingFilteringHook = () => {
     const [hasDiscount, setDiscount] = useState(false);
 
     const fetchData = async () => {
-        const response = await fetch('http://127.0.0.1:3333/products/all');
+        const response = await fetch(`${serverUrl}products/all`);
         const data = await response.json();
         setMyArray(data);
     };
