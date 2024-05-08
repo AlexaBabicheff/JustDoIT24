@@ -6,20 +6,18 @@ import Map from "../../Map/Map";
 import SaleProducts from "../../SaleProducts/SaleProducts";
 import classes from "./AllSales.module.css";
 import { Link } from "react-router-dom";
-import BreadCrumbs from "../../BreadCrumbs/ButtonsAllSales"
+import BreadCrumbs from "../../BreadCrumbs/ButtonsAllSales";
 const AllSales = () => (
   <div className={classes.pageBody}>
     <Navigation />
-    {/* <ButtonsAllSales /> */}
-    <BreadCrumbs />
-      <SaleProducts />
+    <SaleProducts />
 
-      {/* <div className="contact_componentSale"> */}
-        {/* <Contact /> */}
-      {/* </div>
+    {/* <div className="contact_componentSale"> */}
+    <Contact />
+    {/* </div>
       <div className="map_component"> */}
-        {/* <Map /> */}
-      {/* </div> */}
+    <Map />
+    {/* </div> */}
     {/* </div> */}
   </div>
 );

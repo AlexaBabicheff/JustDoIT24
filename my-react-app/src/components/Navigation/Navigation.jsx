@@ -10,6 +10,7 @@ import { NavLink } from "react-router-dom";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import Button1DayDiscount from "./Button1DayDiscount/Button1DayDiscount";
 import modalWindow from "./HeaderImg/50% off.png";
+import { useSelector } from "react-redux"; // Импорт useSelector из react-redux
 
 const Navigation = () => {
   const [nav, setNav] = useState(false);

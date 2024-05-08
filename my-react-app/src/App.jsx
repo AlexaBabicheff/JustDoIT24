@@ -1,4 +1,4 @@
-// Алеся
+
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -51,7 +51,9 @@ function App() {
           <Route path="/one-product-component/:id" element={<OneProductComponent />} />
           <Route path="/one-product/:id" element={<OneProduct />} />
           <Route path="/product-counter" element={<ProductCounter />} />
-          <Route path="/categories/:categoryId" element={<CategoryProducts />} />
+          {/* <Route path="/categories/:categoryId" element={<CategoryProducts />} /> */}
+          <Route path="/categories/:categoryId" element={<CategoriesGoods />} />
+
           <Route path="/categories" element={<Categories />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/panel-component" element={<PanelComponent />} />

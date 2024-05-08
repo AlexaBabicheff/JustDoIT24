@@ -35,29 +35,26 @@ const SaleProducts = () => {
     const discount = price - discountPrice;
     const discountPercentage = Math.round((discount / price) * 100);
     return discountPercentage;
-};
+  };
 
   return (
     <>
       <div className={classes.containerSale}>
-
-       {/* Bread Crumbs  */}
-
-      <div className={classes.btns}>
-        <div className={classes.btn_mainPage}>
-          <button2>
-            <Link to="/">Main Page</Link>
-          </button2>
+        <div className={classes.btns}>
+          <div className={classes.btn_mainPage}>
+            <button2>
+              <Link to="/">Main Page</Link>
+            </button2>
+          </div>
+          <div className={classes.line__MinePageToAllSales}>
+            <hr />
+          </div>
+          <div className={classes.btn_allSales}>
+            <button2>
+              <Link to="/categories-review">All Sales</Link>
+            </button2>
+          </div>
         </div>
-        <div className={classes.line__MinePageToAllSales}>
-          <hr />
-        </div>
-        <div className={classes.btn_allSales}>
-          <button2>
-            <Link to="/categories-review">All Sales</Link>
-          </button2>
-        </div>
-      </div>
 
         <h5>Discounted items</h5>
         <div className={classes.saleProductContainer}>
@@ -68,7 +65,14 @@ const SaleProducts = () => {
               className={classes.saleProductCard}
             >
               <img src={`${serverUrl}/${product.image}`} alt={product.title} />
-              <div className={classes.discountLabel}>- { calculateDiscountPercentage(product.price, product.discont_price) }%</div>
+              <div className={classes.discountLabel}>
+                -{" "}
+                {calculateDiscountPercentage(
+                  product.price,
+                  product.discont_price
+                )}
+                %
+              </div>
               <div>
                 <NavLink to="/favorites">
                   <img
@@ -89,8 +93,10 @@ const SaleProducts = () => {
               </div>
               <h3>{product.title}</h3>
               <div className={classes.priceInfo}>
-              <p>Price: ${product.price}</p>
-              <div className={classes.dicountPrice}>${product.discont_price}</div>
+                <p>Price: ${product.price}</p>
+                <div className={classes.dicountPrice}>
+                  ${product.discont_price}
+                </div>
               </div>
             </NavLink>
           ))}

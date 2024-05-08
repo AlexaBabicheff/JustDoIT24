@@ -15,15 +15,19 @@ const OneProduct = () => {
   };
 
   return (
-    <div className={classes.pageBody}>  
-        <Navigation /> 
+     <div className="pageBody">  
+     <div className={classes.navi}>
+        <Navigation /> </div>
+        <div
+         className={classes.oneProducts}>
         <OneProductComponent />
-        <div className={classes.OneProductContainer}>
+        </div>
+        {/* <div className={classes.OneProductContainer}> */}
         {/* <ProductCounter addToCart={addToCart} /> */}
-      </div>
-      <div className={classes.oneProduct_contactComponent}>
-        <Contact />
-      </div>
+      {/* </div> */}
+      {/* <div className={classes.oneProduct_contactComponent}> */}
+        {/* <Contact /> */}
+      {/* </div> */}
       {/* <div className={classes.map_component}>*/}
         {/*<Map />*/}
       {/*</div> */}
