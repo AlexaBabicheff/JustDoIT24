@@ -1,4 +1,8 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .header {
   width: 100%;
   margin-top: 30px;
@@ -17,6 +21,7 @@ nav {
   display: flex;
   position: relative;
   width: 600px;
+  border: 3px solid red;
   justify-content: space-around;
 }
 nav > ul {
@@ -55,7 +60,6 @@ button12 {
   background: rgb(147, 165, 77);
   cursor: pointer;
   padding: 5px;
-  
 }
 .modal {
   position: absolute;
@@ -177,24 +181,67 @@ a {
     width: 450px;
   }
   .box {
-    width: 1200px;
-}
-li {
-  padding: 34px 20px 34px;
-  font-size: 16px;
-  font-weight: 500;
-}
+    width: 1000px;
+    gap: 15px;
+    margin-left: 15px;
+  }
+  li {
+    padding: 44px 10px 14px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }
 
-/* @media only screen and (min-width: 361px) and (max-width: 768px) { */
-  @media only screen and (max-width: 768px) {
-    .box {
-      right: 350px;
+@media only screen and (min-width: 361px) and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) { */
+  .mobile_btn {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 27px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .menu {
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: -100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    z-index: 10;
+    transition: left 1s;
+  }
+  .active {
+    left: 0;
+  }
+  .menu a {
+    font-size: 18px;
+  }
+  .box {
+    margin-left: 10px;
+    width: 250px;
+  }
+  button12 {
+    right: 30px;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .box {
+    margin-left: 0;
+    width: 250px;
+  }
+  button12 {
+    right: 30px;
   }
   .mobile_btn {
     display: block;
     position: absolute;
-    right: 150px;
+    right: 30px;
     top: 27px;
     cursor: pointer;
     z-index: 10;
@@ -220,33 +267,4 @@ li {
   .menu a {
     font-size: 18px;
   }
-  .box {
-    width: 400px;
-  }
-}
-@media only screen and (max-width: 360px) {
-  .box {
-    right: 450px;
-}
-.menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: fixed;
-  left: -100%;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 50%;
-  height: 100vh;
-  background-color: #f8f8f8;
-  z-index: 10;
-  transition: left 1s;
-}
-.active {
-  left: 0;
-}
-.menu a {
-  font-size: 18px;
-}
 }

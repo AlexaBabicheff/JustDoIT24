@@ -51,10 +51,20 @@ button a {
   width: 100%;
 }
 .saleCardsContainer {
-  display: flex;
+  /* display: grid;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
+  grid-template-columns: repeat(4, 1fr); */
+  justify-content: space-evenly;
+  width: 1250px;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 .saleCard {
   width: 270px;
@@ -136,9 +146,9 @@ button a {
 
 @media only screen and (min-width: 1001px) and (max-width: 1440px) {
   .saleContainer {
-    width: 50%; 
-    width: 1200px;
-  gap: 20px;
+    /* width: 50%;  */
+    /* width: 1200px; */
+  /* gap: 20px; */
   }
   .line hr {
     width: 630px;
@@ -155,23 +165,20 @@ button a {
     /* left: 30px; */
   }
   .saleCard {
-    width: 240px;
+    /* width: 240px; */
     margin-bottom: 90px;
   }
   .saleCardsContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    /* position: relative; */
-    /* margin-left: 50px; */
+    /* width: 80%; */
+    /* gap: 2%; */
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
-  body {
-    font-size: 16px;
-    background-color: green;
-  }
+  .saleCardsContainer {
+    grid-template-columns: repeat(3, 1fr);
+    gap:5px;
+}
 }
 
 /* 480px - 767px */

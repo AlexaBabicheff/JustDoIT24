@@ -1,7 +1,7 @@
 // для перехода из страницы категорий на единичную страницу
 
 import React, { useEffect, useState } from "react";
-import { useParams, Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import classes from "./CategoryProducts.module.css";
 import { serverUrl } from "../../Config";
 import Navigation from "../Navigation/Navigation";
@@ -42,62 +42,73 @@ const CategoryProducts = () => {
   return (
     <div className={classes.pageBody}>
       <div className={classes.StructureContainer}>
-      <Navigation />
-      {/* BreadCrumbs */}
-      <div className={classes.btn_products}>
-      <div className={classes.btns}>
-        <div className={classes.btn_mainPage}>
-          <button2>
-            <Link to="/">Main Page</Link>
-          </button2>
-        </div>
-        <div className={classes.line__MinePageToCategories}>
-          <hr />
-        </div>
-        <div className={classes.btn_categories}>
-          <div className={classes.line__CategoriesToProducts}>
-            <hr />
-          </div>
-          <button2>
-            <Link to="/categories-review">Categories</Link>
-          </button2>
-        </div>
+      
+        {/* BreadCrumbs */}
         <div className={classes.btn_products}>
-          <button2>
-            <Link to="/categories/">Products</Link>
-          </button2>
-        </div>
-      </div>
-      </div>
-      <div className={classes.CategoryProductsContainer}>
-        <div className={classes.CategoryProductsContainerHeader}>
-          {categoryName ? <h1>{categoryName}</h1> : <p>Loading...</p>}
-        </div>
-        <div className={classes.ProductsContainer}>
-          <div className={classes.ProductsContainerCard}>
-            {products.map((product) => (
-              <NavLink
-                key={product.id}
-                to={`/one-product/${product.id}`}
-                className={classes.ProductCard}
-              >
-                <img className={classes.ProductCard}
-                  src={`${serverUrl}/${product.image}`}
-                  alt={product.title}
-                />
-                <div>
-                <img className={classes.likedProduct1} src={whiteHeart} alt="favorites" />
-                </div>
-                <div>
-                 <NavLink to="/basket"><img className={classes.basketProduct1} src={whiteBag} alt="shopping_cart" /></NavLink>
-                 </div>
-                <h3>{product.title}</h3>
-                <p>Price: ${product.price}</p>
-              </NavLink>
-            ))}
+          <div className={classes.btns}>
+            <div className={classes.btn_mainPage}>
+              <button2>
+                <Link to="/">Main Page</Link>
+              </button2>
+            </div>
+            <div className={classes.line__MinePageToCategories}>
+              <hr />
+            </div>
+            <div className={classes.btn_categories}>
+              <div className={classes.line__CategoriesToProducts}>
+                <hr />
+              </div>
+              <button2>
+                <Link to="/categories-review">Categories</Link>
+              </button2>
+            </div>
+            <div className={classes.btn_products}>
+              <button2>
+                <Link to="/categories/">Products</Link>
+              </button2>
+            </div>
           </div>
         </div>
-      </div>
+        <div className={classes.CategoryProductsContainer}>
+          <div className={classes.CategoryProductsContainerHeader}>
+            {categoryName ? <h1>{categoryName}</h1> : <p>Loading...</p>}
+          </div>
+          <div className={classes.ProductsContainer}>
+            <div className={classes.ProductsContainerCard}>
+              {products.map((product) => (
+                <NavLink
+                  key={product.id}
+                  to={`/one-product/${product.id}`}
+                  className={classes.ProductCard}
+                >
+                  <img
+                    className={classes.ProductCard}
+                    src={`${serverUrl}/${product.image}`}
+                    alt={product.title}
+                  />
+                  <div>
+                    <img
+                      className={classes.likedProduct1}
+                      src={whiteHeart}
+                      alt="favorites"
+                    />
+                  </div>
+                  <div>
+                    <NavLink to="/basket">
+                      <img
+                        className={classes.basketProduct1}
+                        src={whiteBag}
+                        alt="shopping_cart"
+                      />
+                    </NavLink>
+                  </div>
+                  <h3>{product.title}</h3>
+                  <p>Price: ${product.price}</p>
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

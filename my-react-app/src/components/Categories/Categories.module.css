@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .categoriesContainer {
   margin-top: 60px;
 }
@@ -66,9 +71,6 @@
 }
 
 @media only screen and (min-width: 1001px) and (max-width: 1440px) {
-  .categoriesCard {
-    width: 90%;
-  }
   .line hr {
     width: 430px;
     margin-top: -30px;

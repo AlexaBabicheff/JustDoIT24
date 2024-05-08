@@ -9,4 +9,7 @@ p{
   .map_component{
     margin-left: 45px;
   }
-   
+  .oneProducts{
+    display: flex;
+    margin-left: -30px;
+  }
