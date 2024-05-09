@@ -26,7 +26,8 @@ const ProductCounter = () => {
   const add2cart = () => {
     console.log(product);
     console.log("adding", id, "*", count);
-    const item = { id, count };
+    let price = 0;
+    const item = { id, count, price };
     dispatch(addItemToCart(item));
   };
 
