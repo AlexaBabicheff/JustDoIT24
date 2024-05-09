@@ -87,11 +87,8 @@
     gap: 2px;  }
 }
 @media only screen and (min-width: 769px) and (max-width: 1000px) {
-  .categoriesCard {
-    width: 80%;
-  }
   .categoriesCardsContainer {
-    width: 80%;
+    width: 70%;
   }
   .categoriesCardsContainer.show4{
     grid-template-columns: repeat(3, 1fr);

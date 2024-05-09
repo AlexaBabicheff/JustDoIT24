@@ -4,7 +4,7 @@
   top: 30px;
   justify-items: start;
 }
-.btns button2 {
+.btns button {
   padding-top: 200px;
   background-color: #fffff1;
   height: 30px;
@@ -13,29 +13,29 @@
   position: absolute;
   text-decoration: none;
 }
-.btns button2:hover {
+.btns button:hover {
   font-weight: 600;
   color: #0e0101;
   border: 1px solid rgb(24, 3, 3);
 }
-.btn_mainPage button2,
-.btn_categories button2 {
+.btn_mainPage button,
+.btn_categories button {
   border: 1px solid rgb(208, 203, 203);
   font-weight: 500;
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button2 :hover,
-.btn_categories button2 :hover {
+.btn_mainPage button :hover,
+.btn_categories button :hover {
   font-weight: 600;
   color: rgb(19, 7, 7);
 }
 .btns a {
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button2 {
+.btn_mainPage button {
   margin-left: 55px;
 }
-.btn_categories button2 {
+.btn_categories button {
   margin-left: 255px;
   top: 0px;
 }

@@ -20,9 +20,9 @@
 nav {
   display: flex;
   position: relative;
-  width: 600px;
-  border: 3px solid red;
+  width: 570px;
   justify-content: space-around;
+  left: 30px;
 }
 nav > ul {
   list-style-type: none;
@@ -43,7 +43,7 @@ li {
   position: relative;
 }
 /* 1 day discount */
-button12 {
+.discount button {
   position: absolute;
   display: flex;
   margin-top: -40px;
@@ -83,7 +83,6 @@ span {
   margin-right: auto;
   width: 400px;
   height: 500px;
-  /* border: 3px solid greenyellow; */
   border-radius: 10px;
   text-align: center;
   border-radius: 15px;
@@ -100,12 +99,17 @@ span {
   border-radius: 10px;
 }
 .cardProd img {
-  max-width: 100%;
   height: auto;
   /* border: 0px, 0px, 1px, 0px; */
 }
+.strikethrough p {
+  text-decoration: line-through;
+}
+.modal_content img {
+  width: 360px;
+  height: 400px;
+}
 .modalWindow {
-  border: 3px solid red;
   display: flex;
   align-items: center;
   gap: 10px;

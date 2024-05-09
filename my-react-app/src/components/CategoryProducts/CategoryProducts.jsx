@@ -1,11 +1,10 @@
 // для перехода из страницы категорий на единичную страницу
 
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import classes from "./CategoryProducts.module.css";
 import { serverUrl } from "../../Config";
 import Navigation from "../Navigation/Navigation";
-import { NavLink } from "react-router-dom";
 import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
 import greenHeart from "../../components/Navigation/HeaderImg/heart_green.png";
 import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
@@ -47,9 +46,9 @@ const CategoryProducts = () => {
         <div className={classes.btn_products}>
           <div className={classes.btns}>
             <div className={classes.btn_mainPage}>
-              <button2>
-                <Link to="/">Main Page</Link>
-              </button2>
+              <button>
+                <NavLink to="/">Main Page</NavLink>
+              </button>
             </div>
             <div className={classes.line__MinePageToCategories}>
               <hr />
@@ -58,14 +57,14 @@ const CategoryProducts = () => {
               <div className={classes.line__CategoriesToProducts}>
                 <hr />
               </div>
-              <button2>
-                <Link to="/categories-review">Categories</Link>
-              </button2>
+              <button>
+                <NavLink to="/categories-review">Categories</NavLink>
+              </button>
             </div>
             <div className={classes.btn_products}>
-              <button2>
-                <Link to="/categories/">Products</Link>
-              </button2>
+              <button>
+                <NavLink to="/categories/">Products</NavLink>
+              </button>
             </div>
           </div>
         </div>

@@ -49,3 +49,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header {
+  color: var(--text-color); 
+}
+
+.menu li {
+  color: var(--text-color); 
+}
+
+.discount button {
+  color: var(--text-color); 
+}

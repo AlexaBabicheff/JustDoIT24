@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import classes from "./FavoriteDetail.module.css";
 import { addItemToFavorites, removeItemFromFavorites } from "./FavoriteReducer";
@@ -62,7 +62,7 @@ const FavoritesDetail = () => {
         </div>
         <div className={classes.favoritesButton}>
           <button>
-            <Link to="/all_products">Back to store</Link>
+            <NavLink to="/all_products">Back to store</NavLink>
           </button>
         </div> */}
       </div>

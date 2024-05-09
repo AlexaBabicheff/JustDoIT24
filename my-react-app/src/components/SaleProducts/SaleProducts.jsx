@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 // import ProductDetailsModal from './ProductDetailsModal';
 import classes from "./SaleProducts.module.css";
 import { serverUrl } from "../../Config";
 import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
 import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
-import { NavLink } from "react-router-dom";
 
 const formatPrice = (price) => `${price.toFixed(2)}$`;
 
@@ -42,17 +41,17 @@ const SaleProducts = () => {
       <div className={classes.containerSale}>
         <div className={classes.btns}>
           <div className={classes.btn_mainPage}>
-            <button2>
-              <Link to="/">Main Page</Link>
-            </button2>
+            <button>
+              <NavLink to="/">Main Page</NavLink>
+            </button>
           </div>
           <div className={classes.line__MinePageToAllSales}>
             <hr />
           </div>
           <div className={classes.btn_allSales}>
-            <button2>
-              <Link to="/categories-review">All Sales</Link>
-            </button2>
+            <button>
+              <NavLink to="/categories-review">All Sales</NavLink>
+            </button>
           </div>
         </div>
 

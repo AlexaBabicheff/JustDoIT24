@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import classes from "./ProductCounter.module.css";
-import Basket from "../pages/Basket/Basket";
 import { addItemToCart } from "../BasketComponent/BasketReducer.jsx";
 
 const ProductCounter = () => {
@@ -38,11 +37,11 @@ const ProductCounter = () => {
           <input type="number" value={count} placeholder="1" min="1" readOnly />
           <button4 onClick={increment}>+</button4>
         </div>
-        <Link to="/basket">
+        <NavLink to="/basket">
           <button alt="basket" onClick={add2cart}>
             Add to cart
           </button>
-        </Link>
+        </NavLink>
       </div>
     </main>
   );

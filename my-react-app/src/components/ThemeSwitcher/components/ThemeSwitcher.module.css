@@ -1,9 +1,82 @@
 body.light {
-    background-color: white;
-    color: black;
-  }
-  
-  body.dark {
-    background-color: black;
-    color: white;
-  }
+  background-color: white;
+  color: rgb(24, 24, 23);
+}
+
+body.dark {
+  background-color: rgb(24, 24, 23);
+  color: white;
+}
+.toggle {
+  position: relative;
+}
+.dark_light {
+  position: relative;
+}
+.btnActive button {
+  margin-top: 40px;
+  top: 60px;
+  position: absolute;
+  border-radius: 5px;
+}
+
+button {
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.active {
+  color: antiquewhite;
+}
+.light {
+  /* Стили для светлой темы */
+  --text-color: black;
+}
+
+.dark {
+  /* Стили для темной темы */
+  --text-color: white;
+}
+.light {
+  --text-color: black;
+}
+
+.dark {
+  --text-color: white;
+}
+
+/* Дополнительные стили для burger-menu */
+.mobile_btn {
+  display: none;
+}
+
+/* Обновленные стили для текста в навигации */
+.menu li {
+  color: var(--text-color);
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0px 10px;
+}
+
+.discount button12 {
+  color: var(--text-color);
+}
+
+.dark_light {
+  color: white; /* Define text color for dark theme */
+}
+
+.light_light {
+  color: black; /* Define text color for light theme */
+}
+
+/* Define active and normal button styles */
+.btnActive {
+  background-color: #333; /* Define background color for active button */
+  color: white; /* Define text color for active button */
+}
+
+.normal {
+  background-color: #ccc; /* Define background color for normal button */
+  color: black; /* Define text color for normal button */
+}

@@ -127,7 +127,7 @@
 .btns {
   /* justify-items: start; */
 }
-.btns button2 {
+.btns button {
   padding-top: 200px;
   background-color: #fffff1;
   height: 30px;
@@ -136,29 +136,29 @@
   position: absolute;
   text-decoration: none;
 }
-.btns button2:hover {
+.btns button:hover {
   font-weight: 600;
   color: #0e0101;
   border: 1px solid rgb(24, 3, 3);
 }
-.btn_mainPage button2,
-.btn_allSales button2 {
+.btn_mainPage button,
+.btn_allSales button {
   border: 1px solid rgb(208, 203, 203);
   font-weight: 500;
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button2 :hover,
-.btn_allSales button2 :hover {
+.btn_mainPage button :hover,
+.btn_allSales button :hover {
   font-weight: 600;
   color: rgb(19, 7, 7);
 }
 .btns a {
   color: rgb(183, 177, 177);
 }
-.btn_mainPage button2 {
+.btn_mainPage button {
   margin-left: 55px;
 }
-.btn_allSales button2 {
+.btn_allSales button {
   margin-left: 255px;
   margin-top: -15px;
 }
@@ -179,9 +179,6 @@
   }
   .saleButton button {
     left: 800px;
-  }
-  .saleContainerHeader {
-    /* left: 30px; */
   }
   .saleCard {
     width: 270px;

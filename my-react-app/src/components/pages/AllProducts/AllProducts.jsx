@@ -60,17 +60,17 @@ const AllProducts = () => {
         <div className={classes.container}>
           <div className={classes.btns}>
             <div className={classes.btn_mainPage}>
-              <button2>
+              <button>
                 <Link to="/">Main Page</Link>
-              </button2>
+              </button>
             </div>
             <div className={classes.line__MinePageToCategories}>
               <hr />
             </div>
             <div className={classes.btn_categories}>
-              <button2>
+              <button>
                 <Link to="/categories-review">All Products</Link>
-              </button2>
+              </button>
             </div>
           </div>
           <h5>All products</h5>
