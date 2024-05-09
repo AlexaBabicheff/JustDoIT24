@@ -8,7 +8,7 @@ import {
   removeItemFromCart,
   increaseItemCount,
   decreaseItemCount,
-  // updateTotalPrice,
+  updateTotalPrice,
 } from "./BasketReducer";
 import { serverUrl } from "../../Config";
 import BasketForm from "./../BasketForm/BasketForm";
@@ -218,14 +218,24 @@ const ProductDetail = () => {
   };
 
   // суммируем общую цену, используя метод reduce для перебора всех товаров в корзине
-  const total = productDetails.reduce((acc, productDetail) => {
-    const item = items.find((item) => parseInt(item.id) === productDetail.id);
-    return (productDetail.price * (item ? item.count : 0)) + acc;
-  }, 0);
+  // const total = productDetails.reduce((acc, productDetail) => {
+  //   const item = items.find((item) => parseInt(item.id) === productDetail.id);
+  //   console.log("total ", item);
+  //   return (productDetail.price * (item ? item.count : 0)) + acc;
+  // }, 0);
+
   // обновляем общую цену в хранилище
-  // useEffect(() => {
-  //   dispatch(updateTotalPrice(total));
-  // }, [total, dispatch]);
+  useEffect(() => {
+    const total = productDetails.reduce((acc, productDetail) => {
+      const item = items.find((item) => parseInt(item.id) === productDetail[0].id);
+      console.log("total ", productDetail);
+      console.log("total ", items);
+      return (productDetail[0].price * (item ? item.count : 0)) + acc;
+    }, 0);
+    console.log("total!", total);
+    dispatch(updateTotalPrice(total));
+  });
+  // , [total, dispatch]
 
   {productDetails.map((productDetail) => {
     const { id, title, price, discont_price, description, image } = productDetail;

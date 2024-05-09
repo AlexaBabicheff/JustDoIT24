@@ -138,7 +138,11 @@ state.items = newItems;
 state.totalItems += action.payload.count;
 },
 removeItemFromCart: (state, action) => {
+let item = state.items.find(({ id }) => id === action.payload);
+console.log("remove item ", item);
+state.totalItems -= item.count;
 state.items = state.items.filter(({ id }) => id !== action.payload);
+
 },
 increaseItemCount: (state, action) => {
 state.items = state.items.map((item) => parseInt(item.id) === action.payload ? { ...item, count: item.count + 1 } : item);
@@ -157,18 +161,14 @@ decreaseItemCount: (state, action) => {
     state.totalItems -= 1;
   }
 },
-increaseTotalPrice: (state, action) => {
-  let item = state.items.find((item) => item.id === action.payload);
-  state.totalItems += item.count * item.price;
-},
-decreaseTotalPrice: (state, action) => {
-  let item = state.items.find((item) => item.id === action.payload);
-  state.totalItems -= item.count * item.price;
-},
+updateTotalPrice: (state, action) => {
+  state.totalPrice = action.payload;
+}
+
 }
 });
 
-export const { addItemToCart, removeItemFromCart, increaseItemCount, decreaseItemCount, 
+export const { addItemToCart, removeItemFromCart, increaseItemCount, decreaseItemCount, updateTotalPrice,
   // increaseTotalPrice, decreaseTotalPrice, removeFromTotalPrice 
 } = basketSlice.actions;
 export default basketSlice.reducer;

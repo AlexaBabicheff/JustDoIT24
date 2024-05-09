@@ -24,6 +24,7 @@ const BasketForm = ({ handleAddUser }) => {
 
   const handleAddToCart = () => {
     setCountItems(countItems + 1);
+    console.log("handleAdd2Cart ", countItems);
     // Logic for adding item to the basket using dispatch and appropriate action creators
   };
 
