@@ -65,22 +65,6 @@
   .categories_component{
    margin-top: 50px;
   }
-
-  /* .contact_component{
-    position: absolute;
-    top: 720px;
-  }
-
-  .map_component{
-    position: absolute;
-    top: 1120px;
-  } */
-/* All_sales */
-  /* .sale_component{
-    position: absolute;
-    top: -1680px;
-  } */
-
   .map&contact{
     position: absolute;
     /* bottom: -50px; */
@@ -112,4 +96,12 @@
     margin-left: 250px;
     }
 
-  
+    .header {
+      color: var(--text-color);
+    }
+    
+    .nav-link {
+      color: var(--text-color);
+      text-decoration: none;
+      padding: 10px;
+    }

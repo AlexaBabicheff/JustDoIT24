@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, NavLink } from "react-router-dom";
 import classes from "./OneProductComponent.module.css";
 import { serverUrl } from "../../Config";
-import iconHeart from "../Navigation/HeaderImg/heart.svg";
 import ProductCounter from "../ProductCounter/ProductCounter";
 import FavoriteButton from "../Favorites/FavoriteButton";
 
@@ -34,9 +33,9 @@ const OneProductComponent = () => {
     <div className={classes.pageBody}>
       <div className={classes.btns}>
         <div className={classes.btn_mainPage}>
-          <button2>
-            <Link to="/">Main Page</Link>
-          </button2>
+          <button>
+            <NavLink to="/">Main Page</NavLink>
+          </button>
         </div>
         <div className={classes.line__MinePageToCategories}>
           <hr />
@@ -45,21 +44,21 @@ const OneProductComponent = () => {
           <div className={classes.line__CategoriesToProducts}>
             <hr />
           </div>
-          <button2>
-            <Link to="/categories-review">Categories</Link>
-          </button2>
+          <button>
+            <NavLink to="/categories-review">Categories</NavLink>
+          </button>
         </div>
         <div className={classes.btn_products}>
-          <button2>
-            <Link to="/categories/">Products</Link>
-          </button2>
+          <button>
+            <NavLink to="/categories/">Products</NavLink>
+          </button>
         </div>
         <div className={classes.line__ProductsToOneProduct}>
           <hr />
         </div>
 
         <div className={classes.btn_oneProduct}>
-          <button2>One Product</button2>
+          <button>One Product</button>
         </div>
       </div>
 

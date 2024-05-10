@@ -85,7 +85,7 @@ function PanelComponent() {
               />
             </NavLink>
             <h3>{item.title}</h3>
-            <p>Price: ${item.price}</p>
+            <p>${item.price}</p>
           </NavLink>
         ))}
       </div>

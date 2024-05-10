@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import classes from "./Sale.module.css";
-import iconBag from "../../components/Navigation/HeaderImg//icons.png";
-import iconHeart from "../../components/Navigation/HeaderImg/heart.svg";
 import { NavLink } from "react-router-dom";
+import classes from "./Sale.module.css";
 import whiteBag from "../../components/Navigation/HeaderImg/bag_white.png";
 import greenHeart from "../../components/Navigation/HeaderImg/heart_green.png";
 import whiteHeart from "../../components/Navigation/HeaderImg/heart_white.png";
@@ -41,13 +38,13 @@ const Sale = () => {
         </div>
         <div className={classes.saleButton}>
           <button>
-            <Link to="/all_sales">All sales</Link>
+            <NavLink to="/all_sales">All sales</NavLink>
           </button>
         </div>
       </div>
       <div className={classes.saleCardsContainer}>
         {filteredProducts.slice(0, 4).map((product) => (
-          <Link key={product.id} to={`/all_sales/`}>
+          <NavLink key={product.id} to={`/all_sales/`}>
             <div
               className={classes.saleCard}
               style={{ position: "relative", overflow: "hidden" }}
@@ -84,7 +81,7 @@ const Sale = () => {
                 </div>
               </div>
             </div>
-          </Link>
+          </NavLink>
         ))}
       </div>
     </div>

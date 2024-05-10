@@ -15,7 +15,7 @@ function Contact() {
           <div className={css.phone}>
             <p className={css.contact_title}>Phone</p>
             <a href="tel:+499999999999">
-              <h8>+49 999 999 99 99</h8>
+              <h3>+49 999 999 99 99</h3>
             </a>
           </div>
 
@@ -52,14 +52,14 @@ function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <h8>Linkstraße 2, 8 OG,10785 Berlin,</h8>
-              <h8> Deutschland</h8>
+              <h3>Linkstraße 2, 8 OG,10785 Berlin,</h3>
+              <h3> Deutschland</h3>
             </a>
           </div>
 
           <div className={css.working_hours}>
             <p className={css.contact_title}>Working Hours</p>
-            <h8>24 hours a day</h8>
+            <h3>24 hours a day</h3>
           </div>
         </div>
       </div>

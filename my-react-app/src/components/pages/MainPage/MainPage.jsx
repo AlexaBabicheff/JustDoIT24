@@ -1,5 +1,5 @@
 import React from "react";
-import ThemeSwitcher from "../../ThemeSwitcher/components/ThemeSwitcher";
+// import ThemeSwitcher from "../../ThemeSwitcher/components/ThemeSwitcher";
 import Navigation from "../../Navigation/Navigation";
 import HeaderBanner from "../../HeaderBanner/Banner";
 import Categories from "../../Categories/Categories";
@@ -11,7 +11,7 @@ import classes from "../MainPage/MainPage.module.css";
 
 const MainPage = () => (
   <div className="pageBody">
-    <ThemeSwitcher />
+    {/* <ThemeSwitcher /> */}
     <Navigation />
     <HeaderBanner />
    
