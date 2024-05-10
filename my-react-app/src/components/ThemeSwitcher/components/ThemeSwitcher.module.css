@@ -1,9 +1,17 @@
 body.light {
-    background-color: white;
-    color: black;
-  }
-  
-  body.dark {
-    background-color: black;
-    color: white;
-  }
+  background-color: white;
+  color: black;
+}
+
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+body.light .header__nav ul li a {
+  color: black;
+}
+
+body.dark .header__nav ul li a {
+  color: white;
+}
