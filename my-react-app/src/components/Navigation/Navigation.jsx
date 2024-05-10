@@ -68,16 +68,16 @@ const Navigation = () => {
             }
           >
             <li>
-              <NavLink to="/">Main Page</NavLink>
+              <NavLink to="/"><p>Main Page</p> </NavLink>
             </li>
             <li>
-              <NavLink to="/categories-review">Categories</NavLink>
+              <NavLink to="/categories-review"><p>Categories</p></NavLink>
             </li>
             <li>
-              <NavLink to="/all_products">All products</NavLink>
+              <NavLink to="/all_products"><p>All products</p></NavLink>
             </li>
             <li>
-              <NavLink to="/all_sales">All sales</NavLink>
+              <NavLink to="/all_sales"><p>All sales</p></NavLink>
             </li>
             <div className={styles.discount}>
               <button onClick={() => setShowModal(true)}>

@@ -10,8 +10,6 @@
 }
 .containerSale h5 {
   position: absolute;
-    /* margin-left: auto;
-    margin-left: auto; */
     padding-top: 40px;
 }
 .lineSale {
@@ -23,6 +21,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
+}
+.saleProductContainer h3{
+  color: rgb(120, 109, 109);
 }
 .saleProductCard {
   position: relative;
@@ -100,11 +101,16 @@
   align-items: center;
   margin-top: 15px;
   gap: 15px;
+  color: rgb(120, 109, 109);
+}
+.priceInfo p{
+  color: rgb(120, 109, 109);
 }
 .price {
   font-weight: 600;
   font-size: 40px;
   font-style: "bold";
+  color: rgb(120, 109, 109);
 }
 .dicountPrice {
   font-family: "Montserrat";

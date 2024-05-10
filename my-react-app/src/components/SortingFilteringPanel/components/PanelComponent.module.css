@@ -24,13 +24,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: rgb(120, 109, 109);
 }
 .allProductsCardsContainer h3:hover {
   white-space: normal;
   overflow: visible;
   height: 70px;
 }
-
+.allProductsCardsContainer p{
+  color: rgb(120, 109, 109);
+}
 .productImage img {
   max-width: 100%;
   height: auto;
@@ -66,4 +69,7 @@
 
 .likedProduct img {
   mix-blend-mode: exclusion;
+}
+label{
+  color: rgb(120, 109, 109);
 }

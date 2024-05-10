@@ -11,7 +11,9 @@ const Form = ({ handleAddUser }) => {
   } = useForm();
 
   const handleUserSubmit = (data) => {
-    handleAddUser(data);
+    if (typeof handleAddUser === 'function') {
+      handleAddUser(data);
+    }
     localStorage.setItem('userData', JSON.stringify(data)); // Сохраняем в local storage
     reset();
   };

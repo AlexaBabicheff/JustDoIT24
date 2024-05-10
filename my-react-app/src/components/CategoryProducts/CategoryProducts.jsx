@@ -102,7 +102,7 @@ const CategoryProducts = () => {
                     </NavLink>
                   </div>
                   <h3>{product.title}</h3>
-                  <p>Price: ${product.price}</p>
+                  <p>${product.price}</p>
                 </NavLink>
               ))}
             </div>

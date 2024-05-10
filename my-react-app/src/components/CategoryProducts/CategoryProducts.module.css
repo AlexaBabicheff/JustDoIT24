@@ -15,7 +15,7 @@
   margin-top: 100px;
  }
 .CategoryProductsContainerHeader h1 {
-  color: rgb(45, 42, 42);
+  color: rgb(120, 109, 109);
   font-size: 36px;
   font-weight: 700;
   padding-top: 80px;
@@ -40,6 +40,7 @@
   height: 30px;
   font-weight: 500;
   font-size: 20px;
+  color: rgb(120, 109, 109);
   margin-top: 10px;
   white-space: nowrap;
   overflow: hidden;
@@ -79,6 +80,9 @@
   top: 70px;
   right: 5px;
   z-index: 1;
+}
+.ProductsContainerCard p{
+  color: rgb(120, 109, 109);
 }
 /* кнопки для переключения между страницами*/
 .btns {

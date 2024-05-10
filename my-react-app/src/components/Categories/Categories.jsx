@@ -18,23 +18,22 @@ const Categories = ({ showAllCategories }) => {
 
   return (
     <div className={classes.categoriesContainer}>
-       {/* <div className="line">
-        <hr />
-      </div>
-      <div className="btns">
-        {" "}
-        <div className="main_page">
+      <div className={classes.categoriesContainerHeader}>
+        <p>Categories</p>
+        <div className={classes.line}>
+          <hr />
+        </div>
+        <div className={classes.categoriesButton}>
           <button>
-            <Link to="/">Main Page</Link>
+            <NavLink to="/categories-review">All categories</NavLink>
           </button>
         </div>
-        <div className="categories_page">
-          <button>Categories</button>
-        </div>
-      </div> */}
-      <div className={classes.categoriesContainerHeader}> 
-          <p>Categories</p>
-      <div className={`${classes.categoriesCardsContainer} ${(!showAllCategories) ? classes.show4 : ''}`}>
+      </div>
+      <div
+        className={`${classes.categoriesCardsContainer} ${
+          !showAllCategories ? classes.show4 : ""
+        }`}
+      >
         {categories
           .slice(0, showAllCategories ? categories.length : 4)
           .map((category) => (
@@ -53,7 +52,6 @@ const Categories = ({ showAllCategories }) => {
               </div>
             </NavLink>
           ))}
-      </div>
       </div>
     </div>
   );

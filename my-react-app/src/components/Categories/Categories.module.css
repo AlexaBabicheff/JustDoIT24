@@ -7,20 +7,41 @@
   margin-top: 60px;
 }
 .line hr {
-  border: 1px solid #dddddd;
-  width: 630px;
-  margin-top: -30px;
-  margin-left: 330px;
-  margin-bottom: 30px;
+  width: 680px;
+  margin-left: 30px;
 }
+.categoriesButton button {
+  margin-right: 30px;
+  background-color: white;
+  width: 170px;
+  height: 36px;
+  border: 1px solid #dddddd;
+  gap: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #dddddd;
+  font-weight: 500;
+  font-size: 16px;
+}
+.categoriesButton button:hover {
+  background-color: #1f1f1f;
+}
+
 .categoriesContainerHeader p {
   margin-left: 70px;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 64px;
+  color: rgb(120, 109, 109);
 }
 .categoriesContainerHeader {
   position: relative;
+  display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
@@ -62,6 +83,7 @@
   font-weight: 500;
   font-size: 20px;
   padding-top: 30px;
+  color: rgb(120, 109, 109);
 }
 
 .categoriesCard img {
@@ -71,14 +93,14 @@
 }
 
 @media only screen and (min-width: 1001px) and (max-width: 1440px) {
-  .line hr {
+  /* .line hr {
     width: 430px;
     margin-top: -30px;
     margin-left: 350px;
   }
   .categoriesButton button {
     left: 800px;
-  }
+  } */
   .categoriesCardsContainer {
     width: 80%;
     gap: 2%;
