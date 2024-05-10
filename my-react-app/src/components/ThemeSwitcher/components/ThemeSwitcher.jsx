@@ -11,11 +11,9 @@ const ThemeSwitcher = () => {
     if (theme === 'light') {
       document.body.classList.add(styles.dark);
       document.body.classList.remove(styles.light);
-      console.log(theme);
     } else if (theme === 'dark') {
       document.body.classList.remove(styles.dark);
       document.body.classList.add(styles.light);
-      console.log(theme);
     }
   }, [theme]);
 

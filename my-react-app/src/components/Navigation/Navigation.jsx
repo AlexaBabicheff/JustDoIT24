@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles from "./Navigation.module.css";
+import  "./../ThemeSwitcher/components/ThemeSwitcher.module.css";
 import logoImg from "./HeaderImg/logo.svg";
 import iconHeart from "./HeaderImg/heart.svg";
 import iconBag from "./HeaderImg/icons.png";
